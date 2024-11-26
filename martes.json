@@ -1,0 +1,33 @@
+{
+  "martes": [
+    {
+      "clase": "Yoga Cero",
+      "horario": "10:00",
+      "idClase": "1",
+      "id": 1
+    },
+    {
+      "clase": "Dharma Yoga",
+      "horario": "11:30",
+      "idClase": "3",
+      "id": 2
+    },
+    {
+      "clase": "Power Yoga ",
+      "horario": "13:30",
+      "idClase": "7",
+      "id": 3
+    },
+    {
+      "clase": "Dharma Yoga",
+      "horario": "15:45",
+      "idClase": "2",
+      "id": 4
+    }
+  ],
+  "routes": {
+    "/martes/:id": {
+      "PUT": "/martes/:id"
+    }
+  }
+}

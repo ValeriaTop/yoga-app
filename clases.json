@@ -1,0 +1,39 @@
+{
+  "clases": [
+    {
+      "clase": "Restaurativo ",
+      "tipo": "Yoga",
+      "id": 1
+    },
+    {
+      "clase": "Dharma",
+      "tipo": "Yoga",
+      "id": 2
+    },
+    {
+      "clase": "Vinyasa",
+      "tipo": "Yoga",
+      "id": 3
+    },
+    {
+      "clase": "Hatha",
+      "tipo": "Yoga",
+      "id": 4
+    },
+    {
+      "clase": "Yin Yoga",
+      "tipo": "Yoga",
+      "id": 5
+    },
+    {
+      "clase": "Yoga Cero",
+      "tipo": "Yoga",
+      "id": 6
+    },
+    {
+      "clase": "Power Yoga",
+      "tipo": "Yoga",
+      "id": 7
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+ body {
+  background-color: #FFFFFF;
+} 
+
+.hero {
+  max-width: 855px;
+}
+
+.aspect-16\/9 {
+  padding-bottom: 56.25%;
+}
+
+.aspect-4\/3 {
+  padding-bottom: 75%;
+}
+
+#hero-player {
+  width: 45%;
+  transform: translateY(58.58937464%);
+}
+
+#hero-phone {
+  width: 26%;
+  transform: translateY(14.09090909%);
+}
+
+#yoga,
+#record,
+#india {
+  transition-property: transform;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.66, -0.49, 0.18, 0.98);
+}
+
+#record,
+#india {
+  display: none;
+}

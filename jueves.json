@@ -1,0 +1,33 @@
+{
+    "jueves": [
+    {
+      "clase": "Yoga Restaurativo",
+      "horario": "09:30",
+      "idClase": "1",
+      "id": 1
+    },
+    {
+      "clase": "Yoga Cero",
+      "horario": "12:00",
+      "idClase": "3",
+      "id": 2
+    },
+    {
+      "clase": "Vinyasa Yoga",
+      "horario": "15:30",
+      "idClase": "7",
+      "id": 3
+    },
+    {
+      "clase": "Dharma Yoga",
+      "horario": "17:00",
+      "idClase": "2",
+      "id": 4
+    }
+  ],
+  "routes": {
+    "/jueves/:id": {
+      "PUT": "/jueves/:id"
+    }
+  }
+}

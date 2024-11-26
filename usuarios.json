@@ -1,0 +1,67 @@
+{
+  "usuarios": [
+    {
+      "usuario": "Ron",
+      "contraseña": "hola",
+      "correo": "hola@gmail.com",
+      "idMembresia": 1,
+      "id": 1
+    },
+    {
+      "usuario": "Ivan",
+      "contraseña": "hola2",
+      "correo": "ivan@gmail.com",
+      "idMembresia": 4,
+      "id": 2
+    },
+    {
+      "usuario": "Valeria",
+      "contraseña": "vale",
+      "correo": "valeria@gmail.com",
+      "idMembresia": 3,
+      "id": 3
+    },
+    {
+      "usuario": "Ivan",
+      "contraseña": "ivan1",
+      "correo": "ivan@gmail.com",
+      "idMembresia": 4,
+      "id": 4
+    },
+    {
+      "usuario": "Gvtp",
+      "contraseña": "valen1",
+      "correo": "valen@gmail.com",
+      "idMembresia": 4,
+      "id": 5
+    },
+    {
+      "usuario": "Carlos128",
+      "contraseña": "carlos128",
+      "correo": "carlos@gmail.com",
+      "idMembresia": 1,
+      "id": 6
+    },
+    {
+      "usuario": "Ronaldo",
+      "contraseña": "hola",
+      "correo": "ronalgo@gmail.com",
+      "idMembresia": 3,
+      "id": 7
+    },
+    {
+      "usuario": "Regina",
+      "contraseña": "Regina123",
+      "correo": "regina@gmail.com",
+      "idMembresia": 4,
+      "id": 8
+    },
+    {
+      "usuario": "Yuli",
+      "contraseña": "Yuliana24",
+      "correo": "yuli@gmail.com",
+      "idMembresia": 4,
+      "id": 9
+    }
+  ]
+}

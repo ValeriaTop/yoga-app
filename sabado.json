@@ -1,0 +1,27 @@
+{
+    "sabado": [
+        {
+          "clase": "Yoga Restaurativo",
+          "horario": "09:30",
+          "idClase": "1",
+          "id": 1
+        },
+        {
+          "clase": "Yoga Cero",
+          "horario": "11:00",
+          "idClase": "3",
+          "id": 2
+        },
+        {
+          "clase": "Dharma Yoga",
+          "horario": "14:00",
+          "idClase": "7",
+          "id": 3
+        }
+      ],
+      "routes": {
+        "/sabado/:id": {
+          "PUT": "/sabado/:id"
+        }
+      }
+}

@@ -1,0 +1,27 @@
+{
+  "lunes": [
+    {
+      "clase": "Yoga Restaurativo",
+      "horario": "09:30",
+      "idClase": "1",
+      "id": 1
+    },
+    {
+      "clase": "Hatha Yoga",
+      "horario": "11:00",
+      "idClase": "3",
+      "id": 2
+    },
+    {
+      "clase": "Power Yoga ",
+      "horario": "14:00",
+      "idClase": "7",
+      "id": 3
+    }
+  ],
+  "routes": {
+    "/lunes/:id": {
+      "PUT": "/lunes/:id"
+    }
+  }
+}

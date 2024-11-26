@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>Padma Yoga</title>
+    <meta name="description" content="Padma Yoga">
+    <meta name="keywords" content="Padma Yoga" />
+    <link rel="icon" type="image/png" href="assets/img/icon/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="manifest" href="__manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="css/layout.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://use.typekit.net/nuo0mcp.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css'>
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body > 
+
+    <!-- loader -->
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- * loader -->
+
+     <!-- App Header -->
+     <div class="appHeader text-dark mt-2 mb-3 ms-0 me-0">
+        <div class="left">
+            <a href="index-yoga.html" class="headerButton">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+        </div>
+        <!-- <div class="right">
+            <form class="d-flex mt-1">
+                <a href="login-yoga.html" class="mt-1 me-3" style="font-size: 20px; color: black;">Login</a>
+                <a href="#" class="btn btn-info rounded shadowed  me-1 mb-1">Registrate Gratis</a>
+            </form>
+        </div> -->
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="app" class="mt-2">
+        <div id="appCapsule" class="full-height"><!--class fullheight added-->
+            <div class="section mt-2">
+                <div class="card product-card">
+                    <div class=" row mb-1 ms-05 me-2">
+                        <div class="col-3 mt-2">
+                            <img src="assets/img/logo_152.PNG" alt="image" class="imaged w86">
+                        </div>
+                        <div class="col-9 mt-4">
+                            <div class="card-title2">{{bienvenida}}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7 ps-0 pt-4 pe-0">
+                            <div class="card-body ps-2 pe-2">
+                                
+                                <div class="card-subtitle ms-2">Sign to Continue</div> 
+                                <!-- <br>   
+                                <h5 class="card-subtitle">Usuario</h5>
+                                <input class="text" type="text" id="usuarioText"> -->
+                                <div class="form-group mt-3">
+                                    <!-- <label for="username">Correo Electrónico</label> -->
+                                    <div class="input-group mt-1 mb-3 d-flex align-items-center">
+                                        <span class="auth-form-icon me-1">
+                                            <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+                                        </span>                                                                   
+                                        <input type="email" class="form-control" id="usuarioText" name="email" placeholder="Correo Electrónico">
+                                    </div>                                    
+                                </div>
+                                <!-- <br>
+                                <h5 class="card-subtitle">Password</h5>
+                                <input class="text" type="password" id="passwordText">
+                                <br>   -->
+                                <div class="form-group mb-0 pb-0">
+                                    <!-- <label for="userpassword">Contraseña</label>                                             -->
+                                    <div class="input-group mt-1 mb-1 d-flex align-items-center"> 
+                                        <span class="auth-form-icon me-1">
+                                            <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon> 
+                                        </span>          
+                                        <input type="password" class="form-control" id="passwordText" name="password" autocomplete="current-password" placeholder="Ingresa Contraseña">
+                                       
+                                    </div>  
+                                    <div class="mt-0 pt-0">
+                                        <a href="https://www.connectando.mx/forgot-password" class="text-muted font-13 mb-1"><ion-icon  name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon> ¿Olvidaste la contraseña?</a>                                    
+                                    </div>                             
+                                </div>
+                             
+                            </div>  
+                        </div>
+                        <div class="col-5 mt-0 pb-0 ps-0 pt-2 pe-0">
+                            <div class="mt-5 mb-1 ms-05 me-2">
+                                <img src="assets/img/_.jpeg" alt="image" class="imaged img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group mt-0 pt-0 mb-0 pb-0">
+                        <div class="row justify-content-between">
+                            
+                            <div class="col-5 ms-1">
+                                <div class="custom-control custom-switch switch-success">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitchSuccess">
+                                    <label class="custom-control-label text-muted ms-1" for="customSwitchSuccess">Recordar Cuenta</label>
+                                </div>
+                            </div> 
+                        </div>
+                    </div> -->
+                    <div class="form-group mt-3 row ms-1 ps-0 mb-0">
+                        <div class="col-12 mt-2">
+                            <button class="btn btn-info rounded shadowed  me-1 mb-1" v-on:click="obtenerUsuario" type="submit">Iniciar Sesión </button>
+                        </div>
+                    </div>       
+                    <!-- <button class="btn btn-info rounded shadowed" v-on:click="obtenerUsuario">Inicia Sesión</button>
+                    <br>  -->
+                    <div class="row ms-2 mb-4">
+                        <div class="col-3">
+                            <h4 class="card-subtitle_without_br">New User? </h4>
+                        </div> 
+                        <div class="col-3">
+                            <h4 class="card-subtitle_without_br_orange" v-on:click="openSignupForm" style="color:rgb(86, 22, 147);"> Sign Up</h4>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- * App Capsule -->
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu no-border">
+        <a href="home.html" class="item">
+            <div class="col">
+                <ion-icon name="home-outline"></ion-icon>
+                <strong>Home</strong>
+            </div>
+        </a>
+        <a href="index.html" class="item">
+            <div class="col">
+                <ion-icon name="reader-outline"></ion-icon>
+                <strong>Menu</strong>
+            </div>
+        </a>
+        <!-- <a href="luka-search.html" class="item">
+            <div class="col">
+                <ion-icon name="search-outline"></ion-icon>
+                <strong>Buscar</strong>
+            </div>
+        </a> -->
+        <a href="luka-loyalty.html" class="item">
+            <div class="col">
+                <ion-icon name="gift-outline"></ion-icon>
+                <strong>Loyalty</strong>
+            </div>
+        </a>
+        <a href="#sidebarPanel" class="item" data-bs-toggle="offcanvas">
+            <div class="col">
+                <ion-icon name="person-outline"></ion-icon>
+                <strong>Perfil</strong>
+            </div>
+        </a>
+       <!-- <a href="luka-pass.html" class="item">
+            <div class="col">
+                <ion-icon name="search-outline"></ion-icon>
+                <strong>Pass</strong>
+            </div>
+        </a>
+        <a href="luka-favorites.html" class="item">
+            <div class="col">
+                <ion-icon name="heart-outline"></ion-icon>
+                <strong>Favoritos</strong>
+            </div>
+        </a><a href="luka-checkout.html" class="item">
+            <div class="col">
+                <ion-icon name="receipt-outline"></ion-icon>
+                <strong>Pedido</strong>
+                <span class="badge badge-danger">1</span>
+            </div>
+        </a>-->
+    </div>
+    <!-- * App Bottom Menu -->
+
+    <!-- App Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarPanel">
+        <div class="offcanvas-body">
+            <!-- profile box -->
+            <div class="profileBox">
+                <div class="image-wrapper">
+                    <img src="assets/img/yoga_2.PNG" alt="Luka" class="" style="height: 42px;">
+                </div>
+                <!--<div class="in">
+                    <strong>Julian Gruber</strong>
+                    <div class="text-muted">
+                        <ion-icon name="location"></ion-icon>
+                        California
+                    </div>
+                </div>-->
+                <a href="#" class="close-sidebar-button" data-bs-dismiss="offcanvas">
+                    <ion-icon name="close"></ion-icon>
+                </a>
+            </div>
+            <!-- * profile box -->
+
+            <ul class="listview flush transparent no-line image-listview mt-2">
+                <li>
+                    <a href="luka-profile.html" class="item">
+                        <ion-icon name="person-outline"></ion-icon>&nbsp;&nbsp;
+                        <div class="in">
+                            Mi Cuenta
+                        </div>
+                    </a>
+                </li>
+                <!--<li>
+                    <a href="luka-pass.html" class="item">
+                        <div class="in">
+                            Loyalty
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item">
+                        <div class="in">
+                            Payment
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item">
+                        <div class="in">
+                            Credit & promo codes
+                        </div>
+                    </a>
+                </li>-->
+                <li>
+                    <a href="luka-profile.html#favorites" class="item">
+                        <div class="in">
+                            Mis Pokes Favoritos
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="luka-followers.html" class="item">
+                        <div class="in">
+                            Seguidores
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="luka-following.html" class="item">
+                        <div class="in">
+                            Seguidos
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item">
+                        <div class="in">
+                            Pedidos anteriores
+                        </div>
+                    </a>
+                </li>
+                
+                <li>
+                    <div class="item">
+                        <div class="in">
+                            <div>Dark Mode</div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input dark-mode-switch" type="checkbox" id="darkmodesidebar">
+                                <label class="form-check-label" for="darkmodesidebar"></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- sidebar buttons -->
+        <div class="sidebar-buttons">
+            <a href="luka-help.html" class="button">
+                <ion-icon name="help-circle-outline"></ion-icon>
+            </a>
+            <a href="luka-profile.html#settings" class="button">
+                <ion-icon name="settings-outline"></ion-icon>
+            </a>
+            <a href="luka-login.html" class="button">
+                <ion-icon name="log-out-outline"></ion-icon>
+            </a>
+        </div>
+        <!-- * sidebar buttons -->
+    </div>
+    <!-- * App Sidebar -->
+
+    <!-- ============== Js Files ==============  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- ProgressBar js -->
+    <script src="assets/js/plugins/progressbar-js/progressbar.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+    <script src="/main.js"></script>
+    <script>
+        const mountedApp = app.mount('#app')
+      </script>
+</body>
+
+</html>

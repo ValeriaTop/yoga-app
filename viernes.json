@@ -1,0 +1,27 @@
+{
+    "viernes": [
+        {
+          "clase": "Hatha Yoga",
+          "horario": "10:00",
+          "idClase": "1",
+          "id": 1
+        },
+        {
+          "clase": "Power Yoga",
+          "horario": "12:30",
+          "idClase": "3",
+          "id": 2
+        },
+        {
+          "clase": "Vinyasa Yoga",
+          "horario": "15:45",
+          "idClase": "7",
+          "id": 3
+        }
+      ],
+      "routes": {
+        "/viernes/:id": {
+          "PUT": "/viernes/:id"
+        }
+      }
+}

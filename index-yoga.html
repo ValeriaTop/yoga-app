@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="theme-color" content="#000000">
+        <title>Padma Yoga</title>
+        <meta name="description" content="Padma Yoga">
+        <meta name="keywords" content="Padma Yoga" />
+        <link rel="icon" type="image/png" href="assets/img/icon/favicon-32x32.png" sizes="32x32">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
+        <link rel="manifest" href="__manifest.json">
+        <link rel="stylesheet" href="./output.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel='stylesheet' href='https://use.typekit.net/nuo0mcp.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+<body>
+  <div class = "p-0 m-0 min-h-screen flex flex-col font-sans"> 
+        <!-- loader -->
+        <div id="loader">
+            <div class="spinner-border text-primary" role="status"></div>
+        </div>
+        <!-- * loader -->
+        <div id="app" class="main-content flex flex-wrap gap-2 flex-grow">
+            <div class="card-5 basis-full min-h-[100px] flex flex-col bg-cover bg-center pt-2 pl-4" style="background-image: url('./assets/img/yoga2.jpeg');">
+                <div class="text-black text-4xl font-bold text-left">
+                {{pageTitle_2}}
+                </div>
+                <div class="flex flex-1">
+                <div class="flex-1"></div>
+                <div class="flex-1 flex flex-col justify-start items-end ">
+                    <div class="text-black text-xl text-right -mt-2 mr-8">
+                    {{pageTitle_1}}
+                    </div>
+                    <button class="bg-black text-white px-8 py-2 rounded-full shadow-md flex items-center mt-6 mr-4 mb-2">
+                    Sign in
+                    </button>
+                </div>
+                </div>
+            </div>
+            <div class="card-1 flex items-center justify-center w-full mt-2">
+                <button class="bg-black text-white text-xl px-2 py-2 rounded-full shadow-md flex items-center">
+                    7 dias de prueba Gratis
+                </button>
+            </div>
+            <div class="text-xl fond-bold mt-2">
+                Yoga Nivel 1
+            </div>
+            
+            
+            <div class="carousel-full splide  splide carousel-container">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide relative  ">
+                            <img src="assets/img/yoga1.jpg" alt="alt" class="imaged custom-height w-full object-cover">
+                            <!-- Chip Yoga -->
+                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                                Yoga
+                            </div>
+                            <!-- Chips Level y Duration -->
+                            <div class="level absolute bottom-16 left-4 bg-black/40 text-white px-2 py-1 rounded-md flex items-center">
+                                <i class="fas fa-signal mr-1"></i> Level 2
+                            </div>
+                            <div class="duration absolute bottom-16 left-28 bg-black/40 text-white px-2 py-1 rounded-md">
+                                30 min
+                            </div>
+                            <!-- Pie de imagen -->
+                            <div class="text-left mt-2">
+                                <h3 class="title leading-tight">Stretchy & Cozy Morning Flow</h3>
+                                <p class="author leading-tight mt-[-4px]">Gustavo Padron • Vinyasa Flow</p>
+                            </div>
+                        </li>
+                        <li class="splide__slide relative">
+                            <img src="assets/img/yoga2.jpeg" alt="alt" class="imaged custom-height w-full object-cover">
+                            <!-- Chip Yoga -->
+                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                                Yoga
+                            </div>
+                            <!-- Chips Level y Duration -->
+                            <div class="level absolute bottom-16 left-4 bg-black/40 text-white px-2 py-1 rounded-md flex items-center">
+                                <i class="fas fa-signal mr-1"></i> Level 1
+                            </div>
+                            <div class="duration absolute bottom-16 left-28 bg-black/40 text-white px-2 py-1 rounded-md">
+                                20 min
+                            </div>
+                            <!-- Pie de imagen -->
+                            <div class="text-left mt-2">
+                                <h3 class="title leading-tight">Relaxing Evening Flow</h3>
+                                <p class="author leading-tight mt-[-4px]">Emily White • Yin Yoga</p>
+                            </div>
+                        </li>
+                        <li class="splide__slide relative">
+                            <img src="assets/img/yoga3.jpg" alt="alt" class="imaged custom-height w-full object-cover">
+                            <!-- Chip Yoga -->
+                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                                Yoga
+                            </div>
+                            <!-- Chips Level y Duration -->
+                            <div class="level absolute bottom-16 left-4 bg-black/40 text-white px-2 py-1 rounded-md flex items-center">
+                                <i class="fas fa-signal mr-1"></i> Level 3
+                            </div>
+                            <div class="duration absolute bottom-16 left-28 bg-black/40 text-white px-2 py-1 rounded-md">
+                                40 min
+                            </div>
+                            <!-- Pie de imagen -->
+                            <div class="text-left mt-2">
+                                <h3 class="title leading-tight">Dynamic Flow</h3>
+                                <p class="author leading-tight mt-[-4px]">Michael Smith • Power Yoga</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="text-xl fond-bold mt-2">
+                Yoga Nivel 2
+            </div>
+            
+           
+            
+           
+            <div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
+                <div class="flex flex-col items-center">
+                    <i class="fa-regular fa-face-smile text-2xl"></i>
+                    <span class="text-sm">Para ti</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-regular fa-calendar-days text-2xl"></i>
+                    <span class="text-sm">Clases</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-gift text-2xl"></i>
+                    <span class="text-sm">Loyalty</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-user text-2xl"></i>
+                    <span class="text-sm">Profile</span>
+                </div>
+            </div>
+            
+        </div>
+    </div> 
+ 
+        
+  
+    <!-- ============== Js Files ==============  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <!-- ProgressBar js -->
+    <script src="assets/js/plugins/progressbar-js/progressbar.min.js"></script>
+    <!-- Base Js File -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="assets/js/base.js"></script>
+    <script src="/main.js"></script>
+    <script>
+        app.mount('#app');
+    </script>
+ 
+</body> 
+</html>

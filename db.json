@@ -1,0 +1,253 @@
+{
+  "usuar": [
+    {
+      "usuario": "Ron",
+      "contraseña": "hola",
+      "correo": "hola@gmail.com",
+      "idMembresia": 1,
+      "id": 1
+    },
+    {
+      "usuario": "Ivan",
+      "contraseña": "hola2",
+      "correo": "ivan@gmail.com",
+      "idMembresia": 4,
+      "id": 2
+    },
+    {
+      "usuario": "Valeria",
+      "contraseña": "vale",
+      "correo": "valeria@gmail.com",
+      "idMembresia": 3,
+      "id": 3
+    },
+    {
+      "usuario": "Ivan",
+      "contraseña": "ivan1",
+      "correo": "ivan@gmail.com",
+      "idMembresia": 4,
+      "id": 4
+    },
+    {
+      "usuario": "Gvtp",
+      "contraseña": "valen1",
+      "correo": "valen@gmail.com",
+      "idMembresia": 4,
+      "id": 5
+    },
+    {
+      "usuario": "Carlos128",
+      "contraseña": "carlos128",
+      "correo": "carlos@gmail.com",
+      "idMembresia": 1,
+      "id": 6
+    },
+    {
+      "usuario": "Ronaldo",
+      "contraseña": "hola",
+      "correo": "ronalgo@gmail.com",
+      "idMembresia": 3,
+      "id": 7
+    },
+    {
+      "usuario": "Regina",
+      "contraseña": "Regina123",
+      "correo": "regina@gmail.com",
+      "idMembresia": 4,
+      "id": 8
+    },
+    {
+      "usuario": "Yuli",
+      "contraseña": "Yuliana24",
+      "correo": "yuli@gmail.com",
+      "idMembresia": 4,
+      "id": 9
+    }
+  ],
+  "instructores": [
+    {
+      "instructor": "Yuliana",
+      "clase": "Hatha",
+      "id": 1
+    },
+    {
+      "instructor": "julio",
+      "clase": "Restaurativo",
+      "id": 2
+    },
+    {
+      "instructor": "Valentina",
+      "clase": "Hatha",
+      "id": 3
+    },
+    {
+      "instructor": "Valentina",
+      "clase": "Dharma",
+      "id": 4
+    }
+  ],
+  "clases": [
+    {
+      "clase": "vinyasa",
+      "tipo": "Yoga",
+      "id": 1
+    },
+    {
+      "clase": "vinyasa",
+      "tipo": "Meditacion",
+      "id": 2
+    },
+    {
+      "clase": "Power Yoga",
+      "tipo": "Yoga",
+      "id": 3
+    },
+    {
+      "clase": "Ujai",
+      "tipo": "Pranayama",
+      "id": 4
+    },
+    {
+      "clase": "Mindfullness",
+      "tipo": "Meditacion",
+      "id": 5
+    }
+  ], 
+  "Lunes": [
+    {
+      "clase": "Yoga Restaurativo",
+      "horario": "09:30",
+      "idClase": "1",
+      "id": 1
+    },
+    {
+      "clase": "Vinyasa Yoga ",
+      "horario": "11:00",
+      "idClase": "3",
+      "id": 2
+    },
+    {
+      "clase": "Power Yoga ",
+      "horario": "14:00",
+      "idClase": "7",
+      "id": 3
+    }
+  ],
+  "Martes": [
+      {
+        "clase": "Yoga Cero",
+        "idClase": "1",
+        "id": 1
+      },
+      {
+        "clase": "Yoga Restaurativo",
+        "idClase": "3",
+        "id": 2
+      },
+      {
+        "clase": "Power Yoga ",
+        "idClase": "7",
+        "id": 3
+      },
+      {
+        "clase": "Dharma Yoga",
+        "idClase": "2",
+        "id": 4
+      }
+  ],
+  "Miercoles": [
+      {
+        "clase": "Hatha Yoga",
+        "idClase": "1",
+        "id": 1
+      },
+      {
+        "clase": "Yoga Restaurativo",
+        "idClase": "3",
+        "id": 2
+      },
+      {
+        "clase": "Vinyasa Yoga",
+        "idClase": "7",
+        "id": 3
+      },
+      {
+        "clase": "Power Yoga",
+        "idClase": "2",
+        "id": 4
+      }
+    ],
+  "Jueves": [
+      {
+        "clase": "Yoga Restaurativo",
+        "idClase": "1",
+        "id": 1
+      },
+      {
+        "clase": "Yoga Cero",
+        "idClase": "3",
+        "id": 2
+      },
+      {
+        "clase": "Vinyasa Yoga",
+        "idClase": "7",
+        "id": 3
+      },
+      {
+        "clase": "Dharma Yoga",
+        "idClase": "2",
+        "id": 4
+      }
+    ],
+  "Viernes": [
+      {
+        "clase": "Hatha Yoga",
+        "idClase": "1",
+        "id": 1
+      },
+      {
+        "clase": "Power Yoga",
+        "idClase": "3",
+        "id": 2
+      },
+      {
+        "clase": "Vinyasa Yoga",
+        "idClase": "7",
+        "id": 3
+      }
+    ],
+  "Sabado": [
+      {
+        "clase": "Yoga Restaurativo",
+        "idClase": "1",
+        "id": 1
+      },
+      {
+        "clase": "Yoga Cero",
+        "idClase": "3",
+        "id": 2
+      },
+      {
+        "clase": "Dharma Yoga",
+        "idClase": "7",
+        "id": 3
+      }
+    ],
+  "Domingo": [
+      {
+        "clase": "Yoga Cero",
+        "idClase": "1",
+        "id": 1
+      },
+      {
+        "clase": "Hatha Yoga",
+        "idClase": "3",
+        "id": 2
+      },
+      {
+        "clase": "Vinyasa Yoga",
+        "idClase": "7",
+        "id": 3
+      }
+    ]
+}

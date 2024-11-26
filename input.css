@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card-1 {
+        @apply grid place-content-center text-white text-2xl;
+    }
+    .card-2 {
+        @apply grid place-content-center rounded-lg;
+    }
+    .card-3 {
+        @apply grid place-content-center rounded-lg text-white text-base;
+    }
+    .card-4 {
+        @apply grid place-content-center rounded-lg text-black text-2xl;
+    }
+    .card-5 {
+        @apply grid place-content-center bg-white;
+    }
+    .card-6 {
+        @apply grid place-content-center rounded-lg bg-white;
+    }
+    .card-7 {
+        @apply grid place-content-center rounded-t-[36px] rounded-b-none bg-white;
+    }
+    .card-8 {
+        @apply grid place-content-center rounded-[26px] bg-white;
+    }
+    .card-9 {
+        @apply grid place-content-center rounded-lg border-2 border-gray-300 bg-white;
+    }
+    .carousel-image {
+        @apply w-full; /* Asegura que la imagen ocupe toda la anchura */
+        height: 200px; /* Ajusta esta altura según lo necesario */
+        object-fit: cover; /* Recorta las imágenes para que llenen el contenedor sin deformarse */
+        object-position: center; /* Centra la imagen dentro del contenedor */
+    }
+    .imaged {
+        height: 200px; /* Reducir altura de las imágenes */
+        object-fit: cover; /* Mantener proporciones */
+        width: 100%; /* Asegurar que ocupe todo el ancho */
+    }
+    
+    .level {
+        position: absolute;
+        bottom: 85px !important; /* Forzar el chip más arriba */
+        left: 5px; /* Alineado con el chip Yoga */
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        padding: 0px 10px;
+        border-radius: 10px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    
+    .duration {
+        position: absolute;
+        bottom: 85px !important; /* Forzar el chip más arriba */
+        left: 85px; /* Alineado un poco a la derecha del chip Level */
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        padding: 0px 10px;
+        border-radius: 10px;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+    
+    
+    .level i {
+        font-size: 0.875rem;
+        margin-right: 5px;
+    }
+    .title {
+        font-weight: bold;
+        font-size: 1.125rem;
+        color: #333333;
+        line-height: 1.2; /* Reduce el espacio entre líneas */
+    }
+    
+    .author {
+        font-size: 0.875rem;
+        color: #888888;
+        line-height: 1.2; /* Reduce el espacio entre líneas */
+        margin-top: -4px; /* Ajusta el margen superior para reducir espacio con el título */
+    }
+    
+    .custom-height {
+        height: 200px !important; /* Reducir altura */
+        object-fit: cover; /* Asegurar proporciones */
+    }
+   
+    .carousel-container {
+        margin-left: 0.5rem; /* Margen izquierdo */
+        margin-right: 0.5rem; /* Margen derecho */
+    }
+    
+}

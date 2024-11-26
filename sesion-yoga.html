@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>Padma Yoga</title>
+    <meta name="description" content="Padma Yoga">
+    <meta name="keywords" content="Padma Yoga" />
+    <link rel="icon" type="image/png" href="assets/img/icon/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="manifest" href="__manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="css/layout.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.typekit.net/nuo0mcp.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css'><link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body > 
+
+    <!-- loader -->
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- * loader -->
+
+     <!-- App Header -->
+    <div class="appHeader bg-primary scrolled">
+        <div class="left">
+            <a href="index-yoga.html" class="headerButton">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="left">
+            <!-- <a href="#" class="headerButton" data-bs-toggle="offcanvas" data-bs-target="#sidebarPanel">
+                <ion-icon name="menu-outline"></ion-icon>
+            </a> -->
+        </div>
+        <div class="right">  
+            <!-- <a class="nav-tabs capsuled nav-item nav-link" href="#">Home</a> 
+        
+            <a class="nav-tabs capsuled nav-item nav-link" href="schedule.html">Schedule</a> 
+
+            <div :id ="liIdAdm" v-if= "liIdAdm === membresiaUsuario()" class="nav-tabs capsuled nav-item nav-link" v-on:click="openInstructorForm">Instructores</div> 
+
+            <div :id ="liIdAdm" v-if= "liIdAdm === membresiaUsuario()" class="nav-tabs capsuled nav-item nav-link" v-on:click="openClassForm">Clases</div>  -->
+         <!-- Extra Header -->
+    <div class="extraHeader p-0">
+        <ul class="nav nav-tabs lined" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#photos" role="tab">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#videos" role="tab">
+                    Schedule
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#sounds" role="tab">
+                   videos
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- * Extra Header -->
+        
+        </div>
+        <!-- <div class="right">
+            <a href="#" class="headerButton toggle-searchbox">
+                <ion-icon name="search-outline"></ion-icon>
+            </a>
+        </div> -->
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="app" class="mt-2">
+        <div id="appCapsule" class="full-height"><!--class fullheight added-->
+            <div class="section mt-2">
+                <div class="card product-card">
+                    <div class="header-large-title">
+        
+                        <h2 class="title">Padma Yoga Online</h2>
+                        <h2 class="subtitle" id= "app" >{{saludo}} {{nombreUsuario()}}</h2> 
+                        <h1>{{ membresiaUsuario()}}</h1>
+                        <h1>{{ liIdReg}}</h1>
+                    </div>
+                    <!-- carousel multiple -->
+                    <div class="carousel-multiple splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                           
+                                <li :id ="liIdReg" v-if= "liIdReg === membresiaUsuario() || liIdFree === membresiaUsuario() "  class="splide__slide">
+                                    <div class="card">
+                                        <img src="/assets/img/_.jpeg" class="card-img-top" alt="Lección 1" style="width: 248px;height:183px;">
+                                        <div class="card-body pt-2">
+                                            <h4 class="mb-0">Yoga al despertar</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li :id ="liIdReg" v-if= "liIdReg === membresiaUsuario() || liIdFree === membresiaUsuario()" class="splide__slide">
+                                    <div class="card">
+                                        <img src="/assets/img/two-women-are-practicing-yoga-together-royalty-free-image-1641814263.jpg" class="card-img-top" alt="Lección 2" style="width: 248px;height:183px;">
+                                        <div class="card-body pt-2">
+                                            <h4 class="mb-0">15 min de Yoga</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li :id ="liIdPre" v-if= "liIdPre === membresiaUsuario() || liIdAdm === membresiaUsuario()" class="splide__slide">
+                                    <div class="card">
+                                        <img src="/assets/img/yoga_index.jpg" class="card-img-top" alt="Lección 3" style="width: 248px;height:183px;">
+                                        <div class="card-body pt-2">
+                                            <h4 class="mb-0">Vinyasa Yoga</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li :id ="liIdPre" v-if= "liIdPre === membresiaUsuario() || liIdAdm === membresiaUsuario()" class="splide__slide">
+                                    <div class="card">
+                                        <img src="assets/img/_.jpeg" class="card-img-top" alt="Lección 4" style="width: 248px;height:183px;">
+                                        <div class="card-body pt-2">
+                                            <h4 class="mb-0">Hatha Yoga</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li :id ="liIdReg" v-if= "liIdReg === membresiaUsuario() || liIdFree === membresiaUsuario()" class="splide__slide">
+                                    <div class="card">
+                                        <img src="/assets/img/images.jpeg" class="card-img-top" alt="Lección 5" style="width: 248px;height:183px;">
+                                        <div class="card-body pt-2">
+                                            <h4 class="mb-0">Yoga Restaurativo</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li :id ="liIdReg" v-if= "liIdReg === membresiaUsuario() || liIdFree === membresiaUsuario()" class="splide__slide">
+                                    <div class="card">
+                                        <img src="/assets/img/two-women-are-practicing-yoga-together-royalty-free-image-1641814263.jpg" class="card-img-top" alt="Lección 6" style="width: 248px;height:183px;">
+                                        <div class="card-body pt-2">
+                                            <h4 class="mb-0">Yoga antes de dormir</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li :id ="liIdPre" v-if= "liIdPre === membresiaUsuario() || liIdAdm === membresiaUsuario()" class="splide__slide">
+                                    <div class="card">
+                                        <img src="/assets/img/images.jpeg" class="card-img-top" alt="Lección " style="width: 248px;height:183px;">
+                                        <div class="card-body pt-2">
+                                            <h4 class="mb-0">Power Yoga</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- * carousel multiple -->
+                     <div :id ="liIdPre" v-if= "liIdPre === membresiaUsuario() || liIdAdm === membresiaUsuario()" class="section mt-3 mb-3">
+                        <div class="card">
+                            <img src="assets/img/_.jpeg" class="card-img-top" alt="image">
+                            <div class="card-body">
+                                <h6 class="card-subtitle">Vinyasa Principiantes</h6>
+                                <h5 class="card-title">Vinyasa con Valeria</h5>
+                                <p class="card-text">
+                                    Disfruta de clases fluidas, para todo loss niveles
+                                </p>
+                                <a href="index.html" class="btn btn-primary">
+                                    <ion-icon name="layers-outline"></ion-icon>
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div :id ="liIdReg" v-if= "liIdReg === membresiaUsuario() || liIdFree === membresiaUsuario()" class="section mt-3 mb-3">
+                        <div class="card">
+                            <img src="assets/img/images.jpeg" class="card-img-top" alt="image">
+                            <div class="card-body">
+                                <h6 class="card-subtitle">Yoga Restaurativo</h6>
+                                <h5 class="card-title">Yoga Restaurativo</h5>
+                                <p class="card-text">
+                                    Clases para cualquier nivel
+                                </p>
+                                <a href="index.html" class="btn btn-primary">
+                                    <ion-icon name="layers-outline"></ion-icon>
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div :id ="liIdPre" v-if= "liIdPre === membresiaUsuario() || liIdAdm === membresiaUsuario()" class="section mt-3 mb-3">
+                        <div class="card">
+                            <img src="assets/img/two-women-are-practicing-yoga-together-royalty-free-image-1641814263.jpg" class="card-img-top" alt="image">
+                            <div class="card-body">
+                                <h6 class="card-subtitle">Power Yoga</h6>
+                                <h5 class="card-title">Power Yoga con Paulina</h5>
+                                <p class="card-text">
+                                    Clases retadoras para niveles avanzados
+                                </p>
+                                <a href="index.html" class="btn btn-primary">
+                                    <ion-icon name="layers-outline"></ion-icon>
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="instructorForm" class="signup-form">
+                        <span v-on:click="closeInstructorForm" class="close-button">&times;</span>
+                        <h2>Registro de Instructores</h2>
+                        <form >
+                          <label for="instructorname">Instructor:</label>
+                          <input type="text" id="instructorname" name="instructorname">
+                          <label for="practicas">Clase:</label>
+                          <input type="list" list="practica" />
+                            <datalist id="practica">
+                           <option value="Vinyasa">
+                            <option value="Restaurativo">  
+                              <option value="Hatha">
+                              <option value="Dharma"> 
+                            </datalist>
+                    
+                          <button class="button" type="submit" v-on:click="getIntructor">Registrar</button>
+                        </form>
+                    </div>
+                    <div id="classForm" class="signup-form">
+                        <span v-on:click="closeClassForm" class="close-button">&times;</span>
+                        <h2>Registro de Clases</h2>
+                        <form >
+                          <label for="classname">Clase:</label>
+                          <input type="text" id="classname" name="classname">
+                          <label for="tipoClase">Categoría:</label>
+                          <input type= "list" list="typeClass" />
+                            <datalist id="typeClass">
+                            <option value="Yoga">
+                            <option value="Pranayama">  
+                              <option value="Meditacion">
+                              <option value="Mantras">
+                            </datalist>
+                    
+                          <button class="button" type="submit" v-on:click="getClass">Registrar</button>
+                        </form>
+                    </div> -->
+                </div>
+            </div>  
+        </div>
+    </div> 
+    <!-- * App Capsule -->
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu no-border">
+        <a href="home.html" class="item">
+            <div class="col">
+                <ion-icon name="home-outline"></ion-icon>
+                <strong>Home</strong>
+            </div>
+        </a>
+        <a href="index.html" class="item">
+            <div class="col">
+                <ion-icon name="reader-outline"></ion-icon>
+                <strong>Menu</strong>
+            </div>
+        </a>
+        <!-- <a href="luka-search.html" class="item">
+            <div class="col">
+                <ion-icon name="search-outline"></ion-icon>
+                <strong>Buscar</strong>
+            </div>
+        </a> -->
+        <a href="luka-loyalty.html" class="item">
+            <div class="col">
+                <ion-icon name="gift-outline"></ion-icon>
+                <strong>Loyalty</strong>
+            </div>
+        </a>
+        <a href="#sidebarPanel" class="item" data-bs-toggle="offcanvas">
+            <div class="col">
+                <ion-icon name="person-outline"></ion-icon>
+                <strong>Perfil</strong>
+            </div>
+        </a>
+       <!-- <a href="luka-pass.html" class="item">
+            <div class="col">
+                <ion-icon name="search-outline"></ion-icon>
+                <strong>Pass</strong>
+            </div>
+        </a>
+        <a href="luka-favorites.html" class="item">
+            <div class="col">
+                <ion-icon name="heart-outline"></ion-icon>
+                <strong>Favoritos</strong>
+            </div>
+        </a><a href="luka-checkout.html" class="item">
+            <div class="col">
+                <ion-icon name="receipt-outline"></ion-icon>
+                <strong>Pedido</strong>
+                <span class="badge badge-danger">1</span>
+            </div>
+        </a>-->
+    </div>
+    <!-- * App Bottom Menu -->
+
+    <!-- App Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarPanel">
+        <div class="offcanvas-body">
+            <!-- profile box -->
+            <div class="profileBox">
+                <div class="image-wrapper">
+                    <img src="assets/img/yoga_2.PNG" alt="Luka" class="" style="height: 42px;">
+                </div>
+                <!--<div class="in">
+                    <strong>Julian Gruber</strong>
+                    <div class="text-muted">
+                        <ion-icon name="location"></ion-icon>
+                        California
+                    </div>
+                </div>-->
+                <a href="#" class="close-sidebar-button" data-bs-dismiss="offcanvas">
+                    <ion-icon name="close"></ion-icon>
+                </a>
+            </div>
+            <!-- * profile box -->
+
+            <ul class="listview flush transparent no-line image-listview mt-2">
+                <li>
+                    <a href="luka-profile.html" class="item">
+                        <ion-icon name="person-outline"></ion-icon>&nbsp;&nbsp;
+                        <div class="in">
+                            Mi Cuenta
+                        </div>
+                    </a>
+                </li>
+                <!--<li>
+                    <a href="luka-pass.html" class="item">
+                        <div class="in">
+                            Loyalty
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item">
+                        <div class="in">
+                            Payment
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item">
+                        <div class="in">
+                            Credit & promo codes
+                        </div>
+                    </a>
+                </li>-->
+                <li>
+                    <a href="luka-profile.html#favorites" class="item">
+                        <div class="in">
+                            Mis Pokes Favoritos
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="luka-followers.html" class="item">
+                        <div class="in">
+                            Seguidores
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="luka-following.html" class="item">
+                        <div class="in">
+                            Seguidos
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item">
+                        <div class="in">
+                            Pedidos anteriores
+                        </div>
+                    </a>
+                </li>
+                
+                <li>
+                    <div class="item">
+                        <div class="in">
+                            <div>Dark Mode</div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input dark-mode-switch" type="checkbox" id="darkmodesidebar">
+                                <label class="form-check-label" for="darkmodesidebar"></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- sidebar buttons -->
+        <div class="sidebar-buttons">
+            <a href="luka-help.html" class="button">
+                <ion-icon name="help-circle-outline"></ion-icon>
+            </a>
+            <a href="luka-profile.html#settings" class="button">
+                <ion-icon name="settings-outline"></ion-icon>
+            </a>
+            <a href="luka-login.html" class="button">
+                <ion-icon name="log-out-outline"></ion-icon>
+            </a>
+        </div>
+        <!-- * sidebar buttons -->
+    </div>
+    <!-- * App Sidebar -->
+
+    <!-- ============== Js Files ==============  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- ProgressBar js -->
+    <script src="assets/js/plugins/progressbar-js/progressbar.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+    <script src="/main.js"></script>
+    <script>
+        const mountedApp = app.mount('#app')
+      </script>
+</body>
+
+</html>

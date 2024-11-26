@@ -1,0 +1,33 @@
+{
+  "miercoles": [
+    {
+      "clase": "Vinyasa Yoga",
+      "horario": "09:00",
+      "idClase": "1",
+      "id": 1
+    },
+    {
+      "clase": "Yoga Restaurativo",
+      "horario": "10:45",
+      "idClase": "3",
+      "id": 2
+    },
+    {
+      "clase": "Vinyasa Yoga",
+      "horario": "12:00",
+      "idClase": "7",
+      "id": 3
+    },
+    {
+      "clase": "Power Yoga",
+      "horario": "13:45",
+      "idClase": "2",
+      "id": 4
+    }
+  ],
+  "routes": {
+    "/miercoles/:id": {
+      "PUT": "/miercoles/:id"
+    }
+  }
+}
