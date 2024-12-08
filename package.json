@@ -9,12 +9,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "tailwindcss": "^3.4.15"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.1"
-  }
+    "express": "^4.21.2"
+  },
+  "description": ""
 }

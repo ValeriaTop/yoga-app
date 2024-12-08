@@ -2,6 +2,8 @@ const app = Vue.createApp({
     data(){
       return {
         pageTitle:'Clases de Yoga y Meditación Online.',
+        pageTitle_1:'Clases de Yoga y Meditación',
+        pageTitle_2:'Bienvenido a Espacio Om',
         content: 'Diferentes disciplinas de Yoga, descubre mas allá de la práctica física. Aprende de diversos profesores de Yoga en casa o mientras viajas.',
         image: 'assets/img/yoga_index.jpg',
         icono: 'assets/img/logo_152.PNG',

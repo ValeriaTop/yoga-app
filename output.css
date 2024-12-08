@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -685,10 +685,8 @@ video {
 }
 
 .carousel-container {
-  margin-left: 0.5rem;
-  /* Margen izquierdo */
-  margin-right: 0.5rem;
-  /* Margen derecho */
+  /*margin-left: 0.5rem;  Margen izquierdo */
+  /*margin-right: 0.5rem; Margen derecho */
 }
 
 .visible {
@@ -769,6 +767,10 @@ video {
 
 .mr-8 {
   margin-right: 2rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mt-2 {
