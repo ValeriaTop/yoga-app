@@ -93,8 +93,35 @@
     }
    
     .carousel-container {
-        /*margin-left: 0.5rem;  Margen izquierdo */
-         /*margin-right: 0.5rem; Margen derecho */
+       margin-left: 0rem;   /*Margen izquierdo */
+        margin-right: 0rem;  /* Margen derecho */
     }
+    /* Añadimos un borde inferior más grueso para mayor visibilidad */
+    .input-field {
+        @apply w-full px-0 pb-2 border-b-2 border-gray-300 focus:outline-none focus:border-black text-lg placeholder-gray-400;
+    }
+
+    /* Ajuste de contenedor para el ícono */
+    .input-icon {
+        @apply absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer;
+    }
+
+    /* Para los enlaces de 'Forgot?' */
+    .forgot-link {
+        @apply text-black text-sm;
+        margin-top: -20px; /* Ajuste para acercarlo más al input de la contraseña */
+    }
+
+    /* Mejorar la alineación de los campos */
+    .input-container {
+        @apply relative;
+    }
+    .forgot-link:hover {
+        @apply text-blue-500;
+      }
+    .card-1 button:hover {
+        @apply bg-gray-800;
+    }
+
     
 }

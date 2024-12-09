@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     './index-yoga.html', // Archivo HTML principal
+    './login-yoga.html', // Archivo HTML principal
     './assets/**/*.{js,ts,jsx,tsx,vue}', // Archivos Vue, JS, etc.
   ],
   theme: {
