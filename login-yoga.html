@@ -37,17 +37,17 @@
              <!-- Formulario -->
             <div class="flex flex-col items-center px-6 mt-6">
                 <!-- Título -->
-                <h1 class="text-3xl font-bold text-center mb-4">Únete a nosotros</h1>
+                <h1 class="text-3xl font-bold text-center mb-4">Únete a nuestra comunidad</h1>
                 
                 <div class="container mx-auto p-6">
                     <!-- Email Input -->
                     <div class="mb-6 input-container">
                       <input
-                        id="email"
+                        id="usuarioText"
                         type="email"
                         name="email"
                         required
-                        placeholder="Enter your email"
+                        placeholder="Ingresa tu correo electrónico"
                         class="input-field"
                       />
                     </div>
@@ -55,11 +55,11 @@
                     <!-- Password Input -->
                     <div class="mb-6 relative input-container">
                         <input
-                        id="password"
+                        id="passwordText"
                         type="password"
                         name="password"
                         required
-                        placeholder="Enter your password"
+                        placeholder="Ingresa tu contraseña"
                         class="input-field"
                         />
                         <!-- Eye Icon -->
@@ -70,7 +70,7 @@
                   
                       <!-- Forgot Link -->
                       <div class="absolute right-0 top-8 mt-2 mr-0">
-                        <a href="#" class="forgot-link text-sm text-gray-500">Forgot?</a>
+                        <a href="#" class="forgot-link text-sm text-gray-500">Olvide contraseña</a>
                       </div>
                     </div>
                   </div>
@@ -79,8 +79,8 @@
                 <!-- Botones -->
                 <div class="w-full flex flex-col gap-3 mt-4 mb-12">
                     <div class="card-1 flex items-center justify-center w-full mt-4">
-                        <button class="bg-black text-white text-xl px-8 py-2 rounded-full shadow-md flex items-center" >
-                            Log in to Espacio Om
+                        <button class="bg-black text-white text-xl px-8 py-2 rounded-full shadow-md flex items-center" v-on:click="obtenerUsuario" type="submit">
+                            Iniciar sesión a Espacio Om
                         </button>
                     </div> 
                    
@@ -93,9 +93,9 @@
 
                 <!-- Texto adicional -->
                 <p class="text-sm text-center text-gray-500 mt-6">
-                    By logging in, you understand and agree to Glo's
-                    <a href="#" class="text-black font-medium">Terms & Conditions</a> & 
-                    <a href="#" class="text-black font-medium">Privacy Policy</a>.
+                    Al iniciar sesión en Espacio Om, entiendes y estas de acuerdo con sus
+                    <a href="#" class="text-black font-medium">Terminos & Condiciones</a> y 
+                    <a href="#" class="text-black font-medium">Politica de Privacidad</a>.
                 </p>
                 <a href="#" class="text-center text-black font-medium mt-2 block">Support Center</a>
             </div>
@@ -139,12 +139,12 @@
     <script src="assets/js/base.js"></script>
     <script src="/main.js"></script>
     <script>
-        app.mount('#app');
+         const mountedApp = app.mount('#app')
     </script>
     <script>
         // Toggle password visibility function
         function togglePassword() {
-          const passwordField = document.getElementById('password');
+          const passwordField = document.getElementById('passwordText');
           const eyeIcon = document.getElementById('eye-icon');
           const type = passwordField.type === 'password' ? 'text' : 'password';
           passwordField.type = type;

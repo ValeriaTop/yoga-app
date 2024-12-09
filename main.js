@@ -3,7 +3,7 @@ const app = Vue.createApp({
       return {
         pageTitle:'Clases de Yoga y Meditación Online.',
         pageTitle_1:'Clases de Yoga y Meditación',
-        pageTitle_2:'Bienvenido a',
+        pageTitle_2:'Bienvenido a ',
         pageTitle_3:'Espacio Om',
         content: 'Diferentes disciplinas de Yoga, descubre mas allá de la práctica física. Aprende de diversos profesores de Yoga en casa o mientras viajas.',
         image: 'assets/img/yoga_index.jpg',
@@ -45,16 +45,15 @@ const app = Vue.createApp({
         console.log("Horario:", timeStart + " - " + timeEnd);
         console.log("Nombre de la clase:", eventName);
       },
-         obtenerUsuario() {
-            var inputUsuario = document.getElementById("usuarioText");
-            var inputPassword = document.getElementById("passwordText");
-            var usuario = inputUsuario.value;
-            var pass = inputPassword.value;
-            console.log("Texto ingresado: " + usuario + " " + pass);
-                
-            this.login(usuario, pass)
-        
-        },
+      obtenerUsuario() {
+        var inputUsuario = document.getElementById("usuarioText");
+        var inputPassword = document.getElementById("passwordText");
+        var usuario = inputUsuario.value;
+        var pass = inputPassword.value;
+        console.log("Texto ingresado: " + usuario + " " + pass);
+            
+        this.login(usuario, pass);
+    },
         async dblcLunes_1() {
           try {
             const horario = this.horario.horario;
@@ -159,30 +158,45 @@ const app = Vue.createApp({
     
 
         
-        async login(usuario, pass) {
-          try {
-            const response = await axios.get('http://localhost:3000/api/usuarios');
-            const usuarios = response.data;
-            
-            const usuarioEncontrado = usuarios.usuar.find(user => user.usuario === usuario && user.contraseña === pass);
-            if (usuarioEncontrado) {
+    async login(usuario, pass) {
+      try {
+          const response = await axios.get('http://localhost:3000/api/usuarios');
+          const usuarios = response.data;
+          
+          // Verifica si el usuario es un correo electrónico
+          const isEmail = usuario.includes('@');
+          
+          // Busca al usuario ya sea por nombre de usuario o correo electrónico
+          const usuarioEncontrado = usuarios.usuar.find(user => {
+              if (isEmail) {
+                  // Si es correo, lo compara con el campo 'correo' en lugar de 'email'
+                  return user.correo === usuario && user.contraseña === pass;
+              } else {
+                  // Si no es correo, lo compara con el nombre de usuario
+                  return user.usuario === usuario && user.contraseña === pass;
+              }
+          });
+  
+          if (usuarioEncontrado) {
               const usuario = usuarioEncontrado.usuario;
               const idMembresia = usuarioEncontrado.idMembresia;
       
-              console.log("membresia " + idMembresia);
-              console.log("usuario "+ usuario);
+              console.log("Membresía: " + idMembresia);
+              console.log("Usuario: " + usuario);
               console.log("Inicio de sesión exitoso");
               window.location.href = "sesion.html"; 
       
               this.datos(usuario, idMembresia);
-            } else {
+          } else {
               this.mostrarAviso();
               console.log("Credenciales inválidas. Inicio de sesión fallido");
-            }
-          } catch (error) {
-            console.error('Error al obtener los usuarios:', error);
           }
-        },
+      } catch (error) {
+          console.error('Error al obtener los usuarios:', error);
+      }
+  },
+  
+  
 
         async schedule() {
           try {
