@@ -43,8 +43,8 @@
                     <div class="text-black text-xl text-right mt-2 mr-9">
                     {{pageTitle_1}}
                     </div>
-                    <button class="bg-black text-white px-8 py-2 rounded-full shadow-md flex items-center mt-14 mr-4 mb-2">
-                    Sign in
+                    <button id="signin-button" class="bg-black text-white px-8 py-2 rounded-full shadow-md flex items-center mt-14 mr-4 mb-2">
+                        Sign in
                     </button>
                 </div>
                 </div>
@@ -363,6 +363,12 @@
     <script>
         app.mount('#app');
     </script>
+     <script>
+        document.getElementById("signin-button").addEventListener("click", function() {
+    window.location.href = "login-yoga.html"; // Redirige a login-yoga.html
+});
+
+     </script>
  
 </body> 
 </html>

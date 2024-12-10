@@ -1,0 +1,304 @@
+  <!DOCTYPE html>
+  <html lang="en" >
+      <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+          <meta name="theme-color" content="#000000">
+          <title>Padma Yoga</title>
+          <meta name="description" content="Padma Yoga">
+          <meta name="keywords" content="Padma Yoga" />
+          <link rel="icon" type="image/png" href="assets/img/icon/favicon-32x32.png" sizes="32x32">
+          <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
+          <link rel="manifest" href="__manifest.json">
+          <link rel="stylesheet" href="./output.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+          <link rel='stylesheet' href='https://use.typekit.net/nuo0mcp.css'>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+          <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      </head>
+  <body>
+      
+    <div class = "p-0 m-0 min-h-screen flex flex-col font-sans"> 
+          <!-- loader -->
+          <div id="loader">
+              <div class="spinner-border text-primary" role="status"></div>
+          </div>
+          <!-- * loader -->
+          <div id="app" class="main-content flex flex-wrap gap-2 flex-grow ">
+              <div class="card-5 basis-full min-h-[100px] flex flex-col bg-cover bg-center pt-2 pl-4" style="background-image: url('./assets/img/meditacion5.jpg.webp');">
+              </div>
+              
+              <!-- Encabezado -->
+              <div class="p-4">
+                <h1 class="text-2xl font-bold">Agenda tus clases</h1>
+                <div class="flex gap-2 mt-4 overflow-x-auto">
+                    <div class="px-2 py-3 bg-gray-200 rounded-full text-center text-xs whitespace-nowrap">LUN <br> 09</div>
+                    <div class="px-2 py-3 bg-gray-200 rounded-full text-center text-xs whitespace-nowrap">MAR <br> 10</div>
+                    <div class="px-2 py-3 bg-gray-200 rounded-full text-center text-xs whitespace-nowrap">MIE <br> 11</div>
+                    <div class="px-2 py-3 bg-gray-200 rounded-full text-center text-xs whitespace-nowrap">JUE <br> 12</div>
+                    <div class="px-2 py-3 bg-gray-200 rounded-full text-center text-xs whitespace-nowrap">VIE <br> 13</div>
+                    <div class="px-2 py-3 bg-gray-200 rounded-full text-center text-xs whitespace-nowrap">SAB <br> 14</div>
+                    <div class="px-2 py-3 bg-gray-200 rounded-full text-center text-xs whitespace-nowrap">DOM <br> 15</div>
+                  
+                </div>
+              </div>
+
+              <div class="bg-gray-100 p-2 w-full">
+                <h2 class="text-lg font-bold mb-3">Hoy</h2>
+              
+                <!-- Tarjeta de clase -->
+                <div class="bg-white p-2 rounded-lg shadow mb-2 flex gap-3 relative w-full">
+                  <div class="flex flex-col items-center ml-1 mt-1 mb-1">
+                    <img src="https://via.placeholder.com/64" alt="Instructor" class="w-20 h-20 rounded-full">
+                    <!-- Ajuste del chip verde -->
+                    <div class="bg-white border-1 border-black text-black text-xs px-2 py-1 rounded-full mt-1">Disponible</div>
+                  </div>
+                  <div class="flex-1 flex flex-col mt-1">
+                    <h3 class="text-lg font-semibold mb-2">Vinyasa Yoga</h3>
+                    <div class="flex justify-between items-start">
+                      <div class="text-sm text-gray-600">
+                        <div>Yoga &bull; Vinyasa</div>
+                        <div>Valeria</div>
+                        <div>7:00 AM</div>
+                      </div>
+                      <div class="text-center mt-2">
+                        <button class="bg-black text-white py-1 px-2 rounded-full text-sm">Cuenta Conmigo</button>
+                        <p class="text-sm text-gray-600 mt-1">7 anotados</p>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+                <!-- Tarjeta de clase -->
+                <div class="bg-white p-2 rounded-lg shadow mb-2 flex gap-3 relative w-full">
+                  <div class="flex flex-col items-center ml-1 mt-1 mb-1">
+                    <img src="https://via.placeholder.com/64" alt="Instructor" class="w-20 h-20 rounded-full">
+                    <!-- Ajuste del chip verde -->
+                    <div class="bg-white border-1 border-black text-black text-xs px-2 py-1 rounded-full mt-1">Disponible</div>
+                  </div>
+                  <div class="flex-1 flex flex-col mt-1">
+                    <h3 class="text-lg font-semibold mb-2">Chi Kung</h3>
+                    <div class="flex justify-between items-start">
+                      <div class="text-sm text-gray-600">
+                        <div> &bull; Chi Kung</div>
+                        <div>Arturo</div>
+                        <div>8:15 AM</div>
+                      </div>
+                      <div class="text-center mt-2">
+                        <button class="bg-black text-white py-1 px-2 rounded-full text-sm">Cuenta Conmigo</button>
+                        <p class="text-sm text-gray-600 mt-1">5 anotados</p>
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+                <!-- Tarjeta de clase -->
+                <div class="bg-white p-2 rounded-lg shadow mb-2 flex gap-3 relative w-full">
+                  <div class="flex flex-col items-center ml-1 mt-1 mb-1">
+                    <img src="https://via.placeholder.com/64" alt="Instructor" class="w-20 h-20 rounded-full">
+                    <!-- Ajuste del chip verde -->
+                    <div class="bg-white border-1 border-black text-black text-xs px-2 py-1 rounded-full mt-1">Disponible</div>
+                  </div>
+                  <div class="flex-1 flex flex-col mt-1">
+                    <h3 class="text-lg font-semibold mb-2">Hatha Yoga</h3>
+                    <div class="flex justify-between items-start">
+                      <div class="text-sm text-gray-600">
+                        <div> Yoga &bull; Hatha</div>
+                        <div>Iván</div>
+                        <div>9:30 AM</div>
+                      </div>
+                      <div class="text-center mt-2">
+                        <button class="bg-black text-white py-1 px-2 rounded-full text-sm">Cuenta Conmigo</button>
+                        <p class="text-sm text-gray-600 mt-1">8  anotados</p>
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+                 <!-- Tarjeta de clase -->
+                 <div class="bg-white p-2 rounded-lg shadow mb-2 flex gap-3 relative w-full">
+                  <div class="flex flex-col items-center ml-1 mt-1 mb-1">
+                    <img src="https://via.placeholder.com/64" alt="Instructor" class="w-20 h-20 rounded-full">
+                    <!-- Ajuste del chip verde -->
+                    <div class="bg-white border-1 border-black text-black text-xs px-2 py-1 rounded-full mt-1">Disponible</div>
+                  </div>
+                  <div class="flex-1 flex flex-col mt-1">
+                    <h3 class="text-lg font-semibold mb-2">Hatha Yoga</h3>
+                    <div class="flex justify-between items-start">
+                      <div class="text-sm text-gray-600">
+                        <div> Yoga &bull; Hatha</div>
+                        <div>Iván</div>
+                        <div>9:30 AM</div>
+                      </div>
+                      <div class="text-center mt-2">
+                        <button class="bg-black text-white py-1 px-2 rounded-full text-sm">Cuenta Conmigo</button>
+                        <p class="text-sm text-gray-600 mt-1">8  anotados</p>
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+                 <!-- Tarjeta de clase -->
+                 <div class="bg-white p-2 rounded-lg shadow mb-2 flex gap-3 relative w-full">
+                  <div class="flex flex-col items-center ml-1 mt-1 mb-1">
+                    <img src="https://via.placeholder.com/64" alt="Instructor" class="w-20 h-20 rounded-full">
+                    <!-- Ajuste del chip verde -->
+                    <div class="bg-white border-1 border-black text-black text-xs px-2 py-1 rounded-full mt-1">Disponible</div>
+                  </div>
+                  <div class="flex-1 flex flex-col mt-1">
+                    <h3 class="text-lg font-semibold mb-2">Yoga Restaurativo</h3>
+                    <div class="flex justify-between items-start">
+                      <div class="text-sm text-gray-600">
+                        <div> Yoga &bull; Restaurativo</div>
+                        <div>Iván</div>
+                        <div>10:45 AM</div>
+                      </div>
+                      <div class="text-center mt-2">
+                        <button class="bg-black text-white py-1 px-2 rounded-full text-sm">Cuenta Conmigo</button>
+                        <p class="text-sm text-gray-600 mt-1">4  anotados</p>
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+                 <!-- Tarjeta de clase -->
+                 <div class="bg-white p-2 rounded-lg shadow mb-2 flex gap-3 relative w-full">
+                  <div class="flex flex-col items-center ml-1 mt-1 mb-1">
+                    <img src="https://via.placeholder.com/64" alt="Instructor" class="w-20 h-20 rounded-full">
+                    <!-- Ajuste del chip verde -->
+                    <div class="bg-white border-1 border-black text-black text-xs px-2 py-1 rounded-full mt-1">Disponible</div>
+                  </div>
+                  <div class="flex-1 flex flex-col mt-1">
+                    <h3 class="text-lg font-semibold mb-2">Hatha Yoga</h3>
+                    <div class="flex justify-between items-start">
+                      <div class="text-sm text-gray-600">
+                        <div> Yoga &bull; Hatha</div>
+                        <div>Mónica</div>
+                        <div>5:345 PM</div>
+                      </div>
+                      <div class="text-center mt-2">
+                        <button class="bg-black text-white py-1 px-2 rounded-full text-sm">Cuenta Conmigo</button>
+                        <p class="text-sm text-gray-600 mt-1">6  anotados</p>
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+                 <!-- Tarjeta de clase -->
+                 <div class="bg-white p-2 rounded-lg shadow mb-2 flex gap-3 relative w-full">
+                  <div class="flex flex-col items-center ml-1 mt-1 mb-1">
+                    <img src="https://via.placeholder.com/64" alt="Instructor" class="w-20 h-20 rounded-full">
+                    <!-- Ajuste del chip verde -->
+                    <div class="bg-white border-1 border-black text-black text-xs px-2 py-1 rounded-full mt-1">Disponible</div>
+                  </div>
+                  <div class="flex-1 flex flex-col mt-1">
+                    <h3 class="text-lg font-semibold mb-2">Vinyasa Yoga</h3>
+                    <div class="flex justify-between items-start">
+                      <div class="text-sm text-gray-600">
+                        <div> Yoga &bull; Vinyasa</div>
+                        <div>Valeria</div>
+                        <div>7:00 PM</div>
+                      </div>
+                      <div class="text-center mt-2">
+                        <button class="bg-black text-white py-1 px-2 rounded-full text-sm">Cuenta Conmigo</button>
+                        <p class="text-sm text-gray-600 mt-1">8  anotados</p>
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="bg-gray-100 p-2 w-full mb-10">
+                <h2 class="text-lg font-bold mb-3">Martes, Dic 10</h2>
+              
+              <!-- Tarjeta de clase -->
+              <div class="bg-white p-2 rounded-lg shadow mb-2 flex gap-3 relative w-full">
+                <div class="flex flex-col items-center ml-1 mt-1 mb-1">
+                  <img src="https://via.placeholder.com/64" alt="Instructor" class="w-20 h-20 rounded-full">
+                  <!-- Ajuste del chip verde -->
+                  <div class="bg-white border-1 border-black text-black text-xs px-2 py-1 rounded-full mt-1">Disponible</div>
+                </div>
+                <div class="flex-1 flex flex-col mt-1">
+                  <h3 class="text-lg font-semibold mb-2">Vinyasa Yoga</h3>
+                  <div class="flex justify-between items-start">
+                    <div class="text-sm text-gray-600">
+                      <div>Yoga &bull; Vinyasa</div>
+                      <div>Valeria</div>
+                      <div>7:00 AM</div>
+                    </div>
+                    <div class="text-center mt-2">
+                      <button class="bg-black text-white py-1 px-2 rounded-full text-sm">Cuenta Conmigo</button>
+                      <p class="text-sm text-gray-600 mt-1">7 anotados</p>
+                    </div>
+                    
+                                         
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+
+
+
+              <div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
+                  <div class="flex flex-col items-center">
+                      <i class="fa-regular fa-face-smile text-2xl"></i>
+                      <span class="text-sm">Para ti</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                      <i class="fa-regular fa-calendar-days text-2xl"></i>
+                      <span class="text-sm">Clases</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                      <i class="fa-solid fa-gift text-2xl"></i>
+                      <span class="text-sm">Loyalty</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                      <i class="fas fa-user text-2xl"></i>
+                      <span class="text-sm">Profile</span>
+                  </div>
+              </div>
+              
+          </div>
+      </div> 
+  
+          
+    
+      <!-- ============== Js Files ==============  -->
+      <!-- Bootstrap -->
+      <script src="assets/js/lib/bootstrap.min.js"></script>
+      <!-- Ionicons -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <!-- Splide -->
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+      <!-- ProgressBar js -->
+      <script src="assets/js/plugins/progressbar-js/progressbar.min.js"></script>
+      <!-- Base Js File -->
+      <script src="https://unpkg.com/vue@3"></script>
+      <script src="assets/js/base.js"></script>
+      <script src="/main.js"></script>
+      <script>
+          const mountedApp = app.mount('#app')
+      </script>
+      <script>
+          // Toggle password visibility function
+          function togglePassword() {
+            const passwordField = document.getElementById('passwordText');
+            const eyeIcon = document.getElementById('eye-icon');
+            const type = passwordField.type === 'password' ? 'text' : 'password';
+            passwordField.type = type;
+            
+            // Change the icon based on password visibility
+            if (type === 'text') {
+              eyeIcon.classList.remove('fa-eye-slash');
+              eyeIcon.classList.add('fa-eye');
+            } else {
+              eyeIcon.classList.remove('fa-eye');
+              eyeIcon.classList.add('fa-eye-slash');
+            }
+          }
+        </script>
+  
+  </body> 
+  </html>
