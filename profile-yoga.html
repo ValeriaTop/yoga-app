@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="theme-color" content="#000000">
+        <title>Padma Yoga</title>
+        <meta name="description" content="Padma Yoga">
+        <meta name="keywords" content="Padma Yoga" />
+        <link rel="icon" type="image/png" href="assets/img/icon/favicon-32x32.png" sizes="32x32">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
+        <link rel="manifest" href="__manifest.json">
+        <link rel="stylesheet" href="./output.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel='stylesheet' href='https://use.typekit.net/nuo0mcp.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+<body>
+    
+  <div class = "p-0 m-0 min-h-screen flex flex-col font-sans"> 
+        <!-- loader -->
+        <div id="loader">
+            <div class="spinner-border text-primary" role="status"></div>
+        </div>
+        <!-- * loader -->
+        <div id="app" class="main-content flex flex-wrap gap-2 flex-grow ">
+            <div class="p-4 space-y-4 flex-grow flex flex-col bg-gray-50 mb-40">
+                <!-- User Info -->
+                <div class="bg-white rounded-lg shadow p-4 flex items-center">
+                  <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
+                    <i class="fa-regular fa-user text-gray-500 text-4xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h2 class="text-lg font-bold">Valeria Top</h2>
+                    <p class="text-sm text-gray-500">gvtorresp27@gmail.com</p>
+                  </div>
+                </div>
+              
+                <!-- Account Section -->
+                <div class="flex-grow">
+                  <h3 class="text-gray-500 text-sm font-bold uppercase mb-2">Cuenta</h3>
+                  <div class="bg-white rounded-lg shadow divide-y">
+                    <a href="#" class="flex items-center justify-between p-4 text-gray-700 no-underline hover:text-gray-700">
+                      <div class="flex items-center">
+                        <i class="fa-regular fa-user text-gray-500 text-xl mr-4"></i>
+                        <span class="text-sm">Información personal</span>
+                      </div>
+                      <i class="fa-solid fa-chevron-right text-gray-400"></i>
+                    </a>
+                    <a href="#" class="flex items-center justify-between p-4 text-gray-700 no-underline hover:text-gray-700">
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-dollar-sign text-gray-500 text-xl mr-4"></i>
+                        <span class="text-sm">Mis membresías</span>
+                      </div>
+                      <i class="fa-solid fa-chevron-right text-gray-400"></i>
+                    </a>
+                    <a href="#" class="flex items-center justify-between p-4 text-gray-700 no-underline hover:text-gray-700">
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-wallet text-gray-500 text-xl mr-4"></i>
+                        <span class="text-sm">Métodos de pago</span>
+                      </div>
+                      <i class="fa-solid fa-chevron-right text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+              
+                <!-- Settings Section -->
+                <div class="flex-grow">
+                  <h3 class="text-gray-500 text-sm font-bold uppercase mb-2">Ajustes</h3>
+                  <div class="bg-white rounded-lg shadow divide-y">
+                    <a href="#" class="flex items-center justify-between p-4 text-gray-700 no-underline hover:text-gray-700">
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-circle-question text-gray-500 text-xl mr-4"></i>
+                        <span class="text-sm">Soporte</span>
+                      </div>
+                      <i class="fa-solid fa-chevron-right text-gray-400"></i>
+                    </a>
+                    <a href="#" class="flex items-center justify-between p-4 text-gray-700 no-underline hover:text-gray-700">
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-gear text-gray-500 text-xl mr-4"></i>
+                        <span class="text-sm">Ajustes de la aplicación</span>
+                      </div>
+                      <i class="fa-solid fa-chevron-right text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+              
+                <!-- Recommendations Section -->
+                <div class="flex-grow">
+                  <h3 class="text-gray-500 text-sm font-bold uppercase mb-2">Recomendar y ganar</h3>
+                  <div class="bg-white rounded-lg shadow divide-y">
+                    <a href="#" class="flex items-center justify-between p-4 text-gray-700 no-underline hover:text-gray-700">
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-user-group text-gray-500 text-xl mr-4"></i>
+                        <span class="text-sm">Amigos que ha recomendado</span>
+                      </div>
+                      <i class="fa-solid fa-chevron-right text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+              
+                <!-- Logout Button -->
+                <div class="pt-2 ">
+                  <button class="w-full bg-gray-100 text-red-500 rounded-lg py-3 flex items-center justify-center space-x-2 " >
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Cerrar sesión</span>
+                  </button>
+                </div>
+              </div>
+              
+              
+            <div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
+                <div class="flex flex-col items-center">
+                    <i class="fa-regular fa-face-smile text-2xl"></i>
+                    <span class="text-sm">Para ti</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-regular fa-calendar-days text-2xl"></i>
+                    <span class="text-sm">Clases</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-gift text-2xl"></i>
+                    <span class="text-sm">Loyalty</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-user text-2xl"></i>
+                    <span class="text-sm">Profile</span>
+                </div>
+            </div>
+            
+        </div>
+    </div> 
+ 
+        
+  
+    <!-- ============== Js Files ==============  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <!-- ProgressBar js -->
+    <script src="assets/js/plugins/progressbar-js/progressbar.min.js"></script>
+    <!-- Base Js File -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="assets/js/base.js"></script>
+    <script src="/main.js"></script>
+    <script>
+         const mountedApp = app.mount('#app')
+    </script>
+   
+</body> 
+</html>
