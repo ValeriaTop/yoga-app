@@ -35,6 +35,34 @@ const app = Vue.createApp({
       }
     },
     methods:{
+        copyQRToClipboard(event) {
+            try {
+                const canvas = document.getElementById("qrCanvas");
+                const qrText = "641f9f48-e76e-4708-a1f4-c1e6d5ca18f7";
+    
+                // Genera el QR Code en el canvas
+                QRCode.toCanvas(
+                    canvas,
+                    qrText,
+                    {
+                        width: 256,
+                        color: {
+                            dark: "#000000", // Color oscuro
+                            light: "#ffffff", // Color claro
+                        },
+                    },
+                    (error) => {
+                        if (error) {
+                            console.error("Error al generar el QR:", error);
+                        } else {
+                            console.log("QR generado exitosamente en el canvas");
+                        }
+                    }
+                );
+            } catch (error) {
+                console.error("Error al generar el QR:", error);
+            }
+        },
       handleClickEvent(day, timeStart, timeEnd, eventName) {
         this.dia = day;
         this.horario.clase = eventName;
@@ -195,9 +223,8 @@ const app = Vue.createApp({
           console.error('Error al obtener los usuarios:', error);
       }
   },
-  
-  
 
+  
         async schedule() {
           try {
               const dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
@@ -516,6 +543,7 @@ const app = Vue.createApp({
     },
     mounted() {
       console.log("mounted")
+      this.copyQRToClipboard();
       this.schedule();
     }
    })

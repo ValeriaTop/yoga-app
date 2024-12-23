@@ -22,6 +22,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
     </head>
 <body>
   <div class = "p-0 m-0 min-h-screen flex flex-col font-sans"> 
@@ -332,19 +334,35 @@
                     <i class="fa-regular fa-calendar-days text-2xl"></i>
                     <span class="text-sm">Clases</span>
                 </a>
-                <a href="clases-yoga.html" class="flex flex-col items-center  text-black">
-                    <i class="fa-solid fa-qrcode"></i>
-                    <!-- <span class="text-sm">Clases</span> -->
-                </a>
-                <div class="flex flex-col items-center  text-black">
+                <button  type="button" class="flex flex-col items-center justify-center bg-black text-white w-16 h-16 rounded-full hover:bg-gray-800 hover:text-gray-200" data-bs-toggle="modal"
+                data-bs-target="#DialogImage">
+                    <i class="fa-solid fa-qrcode text-3xl"></i>
+                </button>
+                
+                <a href="#" class="flex flex-col items-center  text-black">
                     <i class="fa-solid fa-gift text-2xl"></i>
                     <span class="text-sm">Promos</span>
-                </div>
-                <div class="flex flex-col items-center  text-black">
+                </a>
+                <a href="profile-yoga.html" class="flex flex-col items-center  text-black">
                     <i class="fas fa-user text-2xl"></i>
                     <span class="text-sm">Profile</span>
+                </a>
+            </div>
+
+             <!-- Dialog Image -->
+           <div class="modal fade dialogbox" id="DialogImage" data-bs-backdrop="static" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <canvas  id="qrCanvas"  @click.prevent="copyQRToClipboard" class="ms-1 me-1"></canvas> 
+                    <div class="modal-footer">
+                        <div class="btn-inline">
+                            <a href="#" class="btn btn-text-secondary" data-bs-dismiss="modal">Cerrar</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <!-- * Dialog Image -->
             
         </div>
     </div> 
