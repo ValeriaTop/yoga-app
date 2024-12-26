@@ -5,6 +5,7 @@ module.exports = {
     './login-yoga.html', 
     './clases-yoga.html',
     './profile-yoga.html',
+    './info-personal.html',
     './assets/**/*.{js,ts,jsx,tsx,vue}', // Archivos Vue, JS, etc.
   ],
   theme: {
