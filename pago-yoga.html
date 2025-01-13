@@ -9,7 +9,7 @@
         <title>Padma Yoga</title>
         <meta name="description" content="Padma Yoga">
         <meta name="keywords" content="Padma Yoga" />
-        <link rel="icon" type="image/png" href="assets/img/icon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/icon-om.png" sizes="32x32">
         <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
         <link rel="manifest" href="__manifest.json">
         <link rel="stylesheet" href="./output.css">
@@ -36,7 +36,7 @@
 
         <!-- Header -->
     <div class="flex items-center justify-between px-4 py-3 bg-white border-b shadow-md fixed top-0 w-full z-50">
-        <button class="text-lg text-gray-500">
+        <button id="profile-button" class="text-lg text-gray-500">
             <i class="fas fa-arrow-left"></i>
         </button>
         <h1 class="text-lg font-semibold text-gray-800">Métodos de Pago</h1>
@@ -50,7 +50,7 @@
    <div id="app" class="main-content flex-grow flex flex-col items-center justify-center px-4 pt-5">
     <div class="w-full max-w-lg bg-white rounded-lg shadow-lg p-6 text-center">
         <div class="flex justify-center items-center w-16 h-16 mx-auto mb-4 bg-gray-200 rounded-full">
-            <i class="fa-solid fa-wallet text-2xl text-teal-600"></i>
+            <i class="fa-solid fa-wallet text-2xl text-verde-om"></i>
         </div>
         <h2 class="text-lg font-semibold text-gray-800 mb-2">No tiene métodos de pago guardados</h2>
         <p class="text-sm text-gray-500 mb-4">
@@ -58,36 +58,36 @@
         </p>
     </div>
     <div class="w-full max-w-lg mt-4">
-        <button class="w-full bg-teal-600 text-white py-3 rounded-lg shadow-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
+        <button class="w-full bg-verde-om text-white py-3 rounded-lg shadow-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
             <i class="fa-solid fa-credit-card mr-2"></i>
             Añadir nueva tarjeta
         </button>
     </div>
 </div>
 
-           <div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
-              <a href="index-yoga.html" class="flex flex-col items-center text-black">
-                  <i class="fa-regular fa-face-smile text-2xl"></i>
-                  <span class="text-sm">Para ti</span>
-              </a>
-              <a href="clases-yoga.html" class="flex flex-col items-center  text-black">
-                  <i class="fa-regular fa-calendar-days text-2xl"></i>
-                  <span class="text-sm">Clases</span>
-              </a>
-              <button  type="button" class="flex flex-col items-center justify-center bg-black text-white w-16 h-16 rounded-full hover:bg-gray-800 hover:text-gray-200" data-bs-toggle="modal"
-                data-bs-target="#DialogImage">
-                    <i class="fa-solid fa-qrcode text-3xl"></i>
-                </button>
-              
-              <a href="#" class="flex flex-col items-center  text-black">
-                  <i class="fa-solid fa-gift text-2xl"></i>
-                  <span class="text-sm">Promos</span>
-              </a>
-              <a href="profile-yoga.html" class="flex flex-col items-center  text-black">
-                  <i class="fas fa-user text-2xl"></i>
-                  <span class="text-sm">Profile</span>
-              </a>
-           </div>
+<div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
+    <a href="index-yoga.html" class="flex flex-col items-center text-black">
+        <i class="fa-solid fa-om text-2xl"></i>
+        <span class="text-sm">Para ti</span>
+    </a>
+    <a href="clases-yoga.html" class="flex flex-col items-center  text-black">
+        <i class="fa-regular fa-calendar-days text-2xl"></i>
+        <span class="text-sm">Clases</span>
+    </a>
+    <button  type="button" class="flex flex-col items-center justify-center bg-black text-white w-16 h-16 rounded-full hover:bg-gray-800 hover:text-gray-200" data-bs-toggle="modal"
+    data-bs-target="#DialogImage">
+    <img src="./assets/img/icon-om.png" alt="Icono" class="w-10 h-10">
+    </button>
+    
+    <a href="#" class="flex flex-col items-center  text-black">
+        <i class="fa-solid fa-gift text-2xl"></i>
+        <span class="text-sm">Loyalty</span>
+    </a>
+    <a href="profile-yoga.html" class="flex flex-col items-center  text-black">
+        <i class="fas fa-user text-2xl"></i>
+        <span class="text-sm">Profile</span>
+    </a>
+</div>
            <!-- Dialog Image -->
            <div class="modal fade dialogbox" id="DialogImage" data-bs-backdrop="static" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -142,6 +142,13 @@
           }
         }
       </script>
+      <script>
+        document.getElementById("profile-button").addEventListener("click", function() {
+            window.location.href = "profile-yoga.html"; // Redirige a profile-yoga.html
+        });
+
+
+     </script>
  
 </body> 
 </html>

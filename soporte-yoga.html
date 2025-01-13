@@ -9,7 +9,7 @@
         <title>Padma Yoga</title>
         <meta name="description" content="Padma Yoga">
         <meta name="keywords" content="Padma Yoga" />
-        <link rel="icon" type="image/png" href="assets/img/icon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/icon-om.png" sizes="32x32">
         <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
         <link rel="manifest" href="__manifest.json">
         <link rel="stylesheet" href="./output.css">
@@ -34,7 +34,7 @@
         <div id="app" class="main-content flex flex-wrap gap-2 flex-grow ">
              <!-- Header -->
     <div class="flex items-center justify-between px-4 py-3 bg-white border-b shadow-md fixed top-0 w-full z-50">
-        <button class="text-lg text-gray-500">
+        <button id="profile-button" class="text-lg text-gray-500">
             <i class="fas fa-arrow-left"></i>
         </button>
         <h1 class="text-lg font-semibold text-gray-800">Soporte</h1>
@@ -43,7 +43,7 @@
       <!-- Espaciador para el header fijo -->
       <div class="h-[20px]"></div>
 
-            <div class="w-full p-4 bg-gray-50 mt-5">
+            <div class="w-full p-4 bg-gray-50 mt-5 mb-10">
                 <!-- Título y descripción -->
                 <div class="text-center mb-6 ">
            
@@ -58,25 +58,25 @@
               
                   <!-- Pregunta 1 -->
                   <div class="border-b border-gray-300 py-4">
-                    <h3 class="text-base font-medium text-black">Where can I access my account online?</h3>
+                    <h3 class="text-base font-medium text-black">¿Dónde puedo acceder a mi cuenta en línea?</h3>
                     <p class="text-sm text-gray-600 mt-2">
-                      You can access your account online by logging in at <a href="https://momence.com/login" class="text-blue-500 underline">momence.com/login</a>. There you will be able to access your dashboard and manage your account.
+                      Puede acceder a su cuenta en línea iniciando sesión en  <a href="https://espacioom.com/login" class="text-blue-500 underline">espacioom.com/login</a>. Allí podrá acceder a su panel y administrar su cuenta.
                     </p>
                   </div>
               
                   <!-- Pregunta 2 -->
                   <div class="border-b border-gray-300 py-4">
-                    <h3 class="text-base font-medium text-black">Where can I get more support?</h3>
+                    <h3 class="text-base font-medium text-black">¿Dónde puedo obtener más ayuda?</h3>
                     <p class="text-sm text-gray-600 mt-2">
-                      You can contact us by pressing the button at the bottom of this page. You can also send us an email, and we will be happy to respond. Please send your email to <a href="mailto:support@momence.com" class="text-blue-500 underline">support@momence.com</a>.
+                      Puedes contactar con nosotros pulsando el botón al final de esta página. También puedes enviarnos un correo electrónico y estaremos encantados de responderte. Envíe su correo electrónico a support@espacioom.com. <a href="mailto:support@espacioom.com" class="text-blue-500 underline">support@espacioom.com</a>.
                     </p>
                   </div>
               
                   <!-- Pregunta 3 -->
                   <div class="py-4">
-                    <h3 class="text-base font-medium text-black">What is the story behind Momence?</h3>
+                    <h3 class="text-base font-medium text-black">¿Cuál es la historia detrás de Espacio Om?</h3>
                     <p class="text-sm text-gray-600 mt-2">
-                      Momence started with the simple idea to make hosting and booking experiences easier. We were disappointed with existing platforms that did not provide the customer experience we believed talented hosts deserved. Since then, Momence has grown as a platform where hosts, both small and big, run their businesses while creating memorable moments for the world to experience.
+                      Somos un grupo de buscadores apasionados por el autoconocimiento a través de la meditación, el trabajo con el cuerpo, y el estudio de filosofías diversas. Creemos que la verdadera espiritualidad debe traducirse en una mayor felicidad; este mundo sería mucho mejor si estuviera habitado por personas felices compartiendo su felicidad con los demás.
                     </p>
                   </div>
                 </div>
@@ -95,29 +95,29 @@
               
             
            
-            <div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
-              <a href="index-yoga.html" class="flex flex-col items-center text-black">
-                  <i class="fa-regular fa-face-smile text-2xl"></i>
-                  <span class="text-sm">Para ti</span>
-              </a>
-              <a href="clases-yoga.html" class="flex flex-col items-center  text-black">
-                  <i class="fa-regular fa-calendar-days text-2xl"></i>
-                  <span class="text-sm">Clases</span>
-              </a>
-              <button  type="button" class="flex flex-col items-center justify-center bg-black text-white w-16 h-16 rounded-full hover:bg-gray-800 hover:text-gray-200" data-bs-toggle="modal"
+              <div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
+                <a href="index-yoga.html" class="flex flex-col items-center text-black">
+                    <i class="fa-solid fa-om text-2xl"></i>
+                    <span class="text-sm">Para ti</span>
+                </a>
+                <a href="clases-yoga.html" class="flex flex-col items-center  text-black">
+                    <i class="fa-regular fa-calendar-days text-2xl"></i>
+                    <span class="text-sm">Clases</span>
+                </a>
+                <button  type="button" class="flex flex-col items-center justify-center bg-black text-white w-16 h-16 rounded-full hover:bg-gray-800 hover:text-gray-200" data-bs-toggle="modal"
                 data-bs-target="#DialogImage">
-                    <i class="fa-solid fa-qrcode text-3xl"></i>
+                <img src="./assets/img/icon-om.png" alt="Icono" class="w-10 h-10">
                 </button>
-              
-              <a href="#" class="flex flex-col items-center  text-black">
-                  <i class="fa-solid fa-gift text-2xl"></i>
-                  <span class="text-sm">Promos</span>
-              </a>
-              <a href="profile-yoga.html" class="flex flex-col items-center  text-black">
-                  <i class="fas fa-user text-2xl"></i>
-                  <span class="text-sm">Profile</span>
-              </a>
-          </div>
+                
+                <a href="#" class="flex flex-col items-center  text-black">
+                    <i class="fa-solid fa-gift text-2xl"></i>
+                    <span class="text-sm">Loyalty</span>
+                </a>
+                <a href="profile-yoga.html" class="flex flex-col items-center  text-black">
+                    <i class="fas fa-user text-2xl"></i>
+                    <span class="text-sm">Profile</span>
+                </a>
+            </div>
            <!-- Dialog Image -->
            <div class="modal fade dialogbox" id="DialogImage" data-bs-backdrop="static" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -172,6 +172,13 @@
           }
         }
       </script>
+       <script>
+        document.getElementById("profile-button").addEventListener("click", function() {
+            window.location.href = "profile-yoga.html"; // Redirige a profile-yoga.html
+        });
+
+
+     </script>
  
 </body> 
 </html>
