@@ -212,7 +212,7 @@ const app = Vue.createApp({
               console.log("Membresía: " + idMembresia);
               console.log("Usuario: " + usuario);
               console.log("Inicio de sesión exitoso");
-              window.location.href = "sesion.html"; 
+              window.location.href = "index-yoga.html"; 
       
               this.datos(usuario, idMembresia);
           } else {
@@ -262,18 +262,34 @@ const app = Vue.createApp({
             };
             console.log('se guardo en sesion', datos);
             localStorage.setItem('datos', JSON.stringify(datos));
-            window.location.href = ' /sesion.html'; 
+            window.location.href = ' /index-yoga.html'; 
           }, 
 
-          nombreUsuario(){
-
-             // Página de destino
-             const datosString = localStorage.getItem('datos');
-             const datos = JSON.parse(datosString);
- 
-             console.log(datos.nombre + " se guardo nombre"); // John
-             return datos.nombre
-          },
+          nombreUsuario() {
+            // Obtén los datos de localStorage
+            const datosString = localStorage.getItem('datos');
+        
+            // Verifica si existen datos y si son válidos
+            if (!datosString) {
+                console.log("No hay datos en localStorage, devolviendo vacío.");
+                return ""; // Retorna una cadena vacía si no hay datos
+            }
+        
+            // Intenta parsear los datos
+            try {
+                const datos = JSON.parse(datosString);
+                if (datos && datos.nombre) {
+                    console.log(datos.nombre + " se guardó nombre"); // Muestra el nombre en la consola
+                    return datos.nombre; // Retorna el nombre del usuario
+                }
+            } catch (error) {
+                console.error("Error al parsear datos de localStorage:", error);
+            }
+        
+            // Si algo falla, retorna una cadena vacía
+            return "";
+        },
+        
           membresiaUsuario(){
 
             // Página de destino

@@ -12,7 +12,15 @@ module.exports = {
     './assets/**/*.{js,ts,jsx,tsx,vue}', // Archivos Vue, JS, etc.
   ],
   theme: {
-    extend: {}, // Aquí puedes personalizar el tema
+    extend: {
+      colors:{
+        'verde-om': '#137172',
+        'morado-om': '#4E1150',
+        'naranja-om': '#99351E',
+        'dorado-om': '#B39156',
+        'negro-om': '#272726',
+      },
+    }, // Aquí puedes personalizar el tema
   },
   plugins: [], // Agrega plugins si los necesitas
 };

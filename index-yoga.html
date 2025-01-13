@@ -9,7 +9,7 @@
         <title>Padma Yoga</title>
         <meta name="description" content="Padma Yoga">
         <meta name="keywords" content="Padma Yoga" />
-        <link rel="icon" type="image/png" href="assets/img/icon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/icon-om.png" sizes="32x32">
         <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
         <link rel="manifest" href="__manifest.json">
         <link rel="stylesheet" href="./output.css">
@@ -37,7 +37,7 @@
                 <div class="text-black text-3xl font-bold text-left ml-8">
                 {{pageTitle_2}}
                     <br>
-                {{pageTitle_3}}
+                {{pageTitle_3}}  {{ nombreUsuario() || "" }}
                 </div>
                 <div class="flex flex-1">
                 <div class="flex-1"></div>
@@ -45,18 +45,18 @@
                     <div class="text-black text-xl text-right mt-2 mr-9">
                     {{pageTitle_1}}
                     </div>
-                    <button id="signin-button" class="bg-black text-white px-8 py-2 rounded-full shadow-md flex items-center mt-14 mr-4 mb-2">
+                    <button id="signin-button" class="bg-verde-om text-white text-xl px-8 py-2 rounded-full shadow-md flex items-center mt-14 mr-4 mb-2">
                         Sign in
                     </button>
                 </div>
                 </div>
             </div>
-            <div class="card-1 flex items-center justify-center w-full mt-2">
-                <button class="bg-black text-white text-xl px-8 py-2 rounded-full shadow-md flex items-center">
+            <div class="card-1 flex items-center justify-center w-full mt-3">
+                <button id="muestra-button" class="bg-naranja-om text-white text-xl px-8 py-2 rounded-full shadow-md flex items-center">
                     Clase Muestra Gratis
                 </button>
             </div>            
-            <div class="title leading-tight text-xl fond-bold mt-4 ml-2">
+            <div class="title leading-tight text-xl fond-bold mt-3 ml-2">
                 Yoga Suave
             </div>
             <div class="carousel-full splide splide carousel-container">
@@ -65,7 +65,7 @@
                         <li class="splide__slide relative  ">
                             <img src="assets/img/yoga7.jpeg" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Yoga 
                             </div>
                             <!-- Chips Level y Duration -->
@@ -84,7 +84,7 @@
                         <li class="splide__slide relative">
                             <img src="assets/img/yoga3.jpg" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Yoga
                             </div>
                             <!-- Chips Level y Duration -->
@@ -103,7 +103,7 @@
                         <li class="splide__slide relative">
                             <img src="assets/img/yoga8.jpg" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Yoga
                             </div>
                             <!-- Chips Level y Duration -->
@@ -132,7 +132,7 @@
                         <li class="splide__slide relative  ">
                             <img src="assets/img/meditacion_1.jpg" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Meditacion
                             </div>
                             <!-- Chips Level y Duration -->
@@ -151,7 +151,7 @@
                         <li class="splide__slide relative">
                             <img src="assets/img/meditacion_2.jpg" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Meditación
                             </div>
                             <!-- Chips Level y Duration -->
@@ -170,7 +170,7 @@
                         <li class="splide__slide relative">
                             <img src="assets/img/meditacion_3.jpg" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Meditación
                             </div>
                             <!-- Chips Level y Duration -->
@@ -199,7 +199,7 @@
                         <li class="splide__slide relative  ">
                             <img src="assets/img/yoga1.jpg" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Yoga 
                             </div>
                             <!-- Chips Level y Duration -->
@@ -218,7 +218,7 @@
                         <li class="splide__slide relative">
                             <img src="assets/img/yoga6.jpeg" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Yoga
                             </div>
                             <!-- Chips Level y Duration -->
@@ -237,7 +237,7 @@
                         <li class="splide__slide relative">
                             <img src="assets/img/yoga5.jpg.webp" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2  bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Yoga
                             </div>
                             <!-- Chips Level y Duration -->
@@ -266,7 +266,7 @@
                         <li class="splide__slide relative  ">
                             <img src="assets/img/cacao.avif" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2  bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                Evento Especial
                             </div>
                             <!-- Chips Level y Duration -->
@@ -285,7 +285,7 @@
                         <li class="splide__slide relative">
                             <img src="assets/img/kirtan2.jpg" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                 Evento Especial
                             </div>
                             <!-- Chips Level y Duration -->
@@ -304,7 +304,7 @@
                         <li class="splide__slide relative">
                             <img src="assets/img/meditacion5.jpg.webp" alt="alt" class="imaged custom-height w-full object-cover">
                             <!-- Chip Yoga -->
-                            <div class="absolute top-2 left-2 bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-2 left-2 bg-morado-om text-white text-sm font-semibold px-3 py-1 rounded-full">
                                Evento Especial
                             </div>
                             <!-- Chips Level y Duration -->
@@ -327,7 +327,7 @@
            
             <div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
                 <a href="#" class="flex flex-col items-center text-black">
-                    <i class="fa-regular fa-face-smile text-2xl"></i>
+                    <i class="fa-solid fa-om text-2xl"></i>
                     <span class="text-sm">Para ti</span>
                 </a>
                 <a href="clases-yoga.html" class="flex flex-col items-center  text-black">
@@ -336,12 +336,12 @@
                 </a>
                 <button  type="button" class="flex flex-col items-center justify-center bg-black text-white w-16 h-16 rounded-full hover:bg-gray-800 hover:text-gray-200" data-bs-toggle="modal"
                 data-bs-target="#DialogImage">
-                    <i class="fa-solid fa-qrcode text-3xl"></i>
+                <img src="./assets/img/icon-om.png" alt="Icono" class="w-10 h-10">
                 </button>
                 
                 <a href="#" class="flex flex-col items-center  text-black">
                     <i class="fa-solid fa-gift text-2xl"></i>
-                    <span class="text-sm">Promos</span>
+                    <span class="text-sm">Loyalty</span>
                 </a>
                 <a href="profile-yoga.html" class="flex flex-col items-center  text-black">
                     <i class="fas fa-user text-2xl"></i>
@@ -387,8 +387,9 @@
     </script>
      <script>
         document.getElementById("signin-button").addEventListener("click", function() {
-    window.location.href = "login-yoga.html"; // Redirige a login-yoga.html
-});
+            window.location.href = "login-yoga.html"; // Redirige a login-yoga.html
+        });
+
 
      </script>
  
