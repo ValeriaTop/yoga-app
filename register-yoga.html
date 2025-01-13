@@ -32,14 +32,26 @@
         </div>
         <!-- * loader -->
         <div id="app" class="main-content flex flex-wrap gap-2 flex-grow ">
-            <div class="card-5 basis-full min-h-[100px] flex flex-col bg-cover bg-center pt-2 pl-4" style="background-image: url('./assets/img/meditacion_4.jpg');">
+            <div class="card-5 basis-full min-h-[100px] flex flex-col bg-cover bg-center pt-2 pl-4" style="background-image: url('./assets/img/yoga3.jpg');">
             </div>
              <!-- Formulario -->
             <div class="flex flex-col items-center px-6 mt-6">
                 <!-- Título -->
-                <h1 class="text-3xl font-bold text-center mb-4">Únete a nuestra comunidad</h1>
+                <h1 class="text-3xl font-bold text-center mb-4">Crea tu cuenta y únete a nuestra comunidad</h1>
+
                 
-                <div class="container mx-auto p-6">
+                <div class="container mx-auto p-6 mb-10">
+                  <!-- Name Input -->
+                  <div class="mb-6 input-container">
+                    <input
+                      id="nombreText"
+                      type="name"
+                      name="name"
+                      required
+                      placeholder="Ingresa tu Nombre Completo"
+                      class="input-field"
+                    />
+                  </div>
                     <!-- Email Input -->
                     <div class="mb-6 input-container">
                       <input
@@ -59,40 +71,56 @@
                         type="password"
                         name="password"
                         required
-                        placeholder="Ingresa tu contraseña"
+                        placeholder="Crea tu contraseña"
                         class="input-field"
                         />
                         <!-- Eye Icon -->
                         <div class="input-icon" onclick="togglePassword()">
                         <i id="eye-icon" class="fa-solid fa-eye-slash"></i>
                         </div>
-                 
-                  
-                      <!-- Forgot Link -->
-                      <div class="absolute right-0 top-8 mt-2 mr-0">
-                        <a href="#" class="forgot-link text-sm text-gray-500">Olvide contraseña</a>
-                      </div>
+
+                       
+                  </div>
+                   <!-- Confirm Password Input -->
+                   <div class="mb-6 relative input-container">
+                    <input
+                    id="passwordconfirmText"
+                    type="password"
+                    name="passwordconfirm"
+                    required
+                    placeholder="Confirma tu contraseña"
+                    class="input-field"
+                    />
+                    <!-- Eye Icon -->
+                    <div class="input-icon" onclick="togglePassword2()">
+                    <i id="eye-icon2" class="fa-solid fa-eye-slash"></i>
+                    </div>
+               
+                
+                    <!-- Forgot Link -->
+                    <div class="absolute left-0 top-8 mt-2 mr-0">
+                      <div class="text-sm text-gray-400">Contraseña mínimo 8 carácteres</div>
                     </div>
                   </div>
                   
 
                 <!-- Botones -->
-                <div class="w-full flex flex-col gap-3 mt-4 mb-12">
+                <div class="w-full flex flex-col gap-3 mt-7 mb-12">
                     <div class="card-1 flex items-center justify-center w-full mt-4">
-                        <button class="bg-verde-om text-white text-xl px-8 py-2 rounded-full shadow-md flex items-center" v-on:click="obtenerUsuario" type="submit">
-                            Iniciar sesión a Espacio Om
+                        <button class="bg-naranja-om text-white text-xl px-8 py-2 rounded-full shadow-md flex items-center" v-on:click="obtenerUsuario" type="submit">
+                            Guarda y crea tu cuenta
                         </button>
                     </div> 
                    
                     <div class="card-1 flex items-center justify-center w-full -mt-3">
-                        <a href="register-yoga.html" class=" text-black text-xl flex items-center">
-                            Crea una cuenta
-                        </a>
+                        <div class=" text-black text-xl flex items-center">
+                            Ya tengo cuenta 
+                        </div>
                     </div>
                 </div>
 
                 <!-- Texto adicional -->
-                <p class="text-sm text-center text-gray-500 mt-6">
+                <p class="text-sm text-center text-gray-500 mt-3">
                     Al iniciar sesión en Espacio Om, entiendes y estas de acuerdo con sus
                     <a href="#" class="text-black font-medium">Terminos & Condiciones</a> y 
                     <a href="#" class="text-black font-medium">Politica de Privacidad</a>.
@@ -163,6 +191,25 @@
             eyeIcon.classList.add('fa-eye-slash');
           }
         }
+      </script>
+       <script>
+        // Toggle password visibility function
+        function togglePassword2() {
+          const passwordField2 = document.getElementById('passwordconfirmText');
+          const eyeIcon2 = document.getElementById('eye-icon2');
+          const type2 = passwordField2.type === 'password' ? 'text' : 'password'; // Usar solo 'password' o 'text'
+          passwordField2.type = type2;
+
+          // Cambiar el icono según la visibilidad de la contraseña
+          if (type2 === 'text') {
+            eyeIcon2.classList.remove('fa-eye-slash');
+            eyeIcon2.classList.add('fa-eye');
+          } else {
+            eyeIcon2.classList.remove('fa-eye');
+            eyeIcon2.classList.add('fa-eye-slash');
+          }
+        }
+
       </script>
  
 </body> 
