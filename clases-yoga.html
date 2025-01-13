@@ -265,7 +265,7 @@
 
 
 
-              <div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
+            <div class="card-4 fixed bottom-0 left-0 w-full bg-white min-h-[70px] max-h-[130px] flex items-center justify-around border-t shadow-lg z-50">
                 <a href="index-yoga.html" class="flex flex-col items-center text-black">
                     <i class="fa-solid fa-om text-2xl"></i>
                     <span class="text-sm">Para ti</span>
@@ -288,6 +288,20 @@
                     <span class="text-sm">Profile</span>
                 </a>
             </div>
+             <!-- Dialog Image -->
+           <div class="modal fade dialogbox" id="DialogImage" data-bs-backdrop="static" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <canvas  id="qrCanvas"  @click.prevent="copyQRToClipboard" class="ms-1 me-1 "></canvas> 
+                    <div class="modal-footer">
+                        <div class="btn-inline">
+                            <a href="#" class="btn btn-text-secondary" data-bs-dismiss="modal">Cerrar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- * Dialog Image -->
               
           </div>
       </div> 
