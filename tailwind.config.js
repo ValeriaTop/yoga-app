@@ -9,6 +9,7 @@ module.exports = {
     './membresia-yoga.html',
     './pago-yoga.html',
     './soporte-yoga.html',
+    './forgotpass-yoga.html',
     './assets/**/*.{js,ts,jsx,tsx,vue}', // Archivos Vue, JS, etc.
   ],
   theme: {

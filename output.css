@@ -1354,6 +1354,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1592,6 +1597,11 @@ video {
 .focus\:ring-teal-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(20 184 166 / var(--tw-ring-opacity, 1));
+}
+
+.focus\:ring-verde-om:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(19 113 114 / var(--tw-ring-opacity, 1));
 }
 
 .focus\:ring-offset-2:focus {
